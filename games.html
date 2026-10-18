@@ -42,6 +42,61 @@
 
         <link rel="preload" href="/MediaMolecule.PlayCMS.StudioTheme/fonts/Neucha.woff" as="font" type="font/woff" crossorigin="anonymous">
         <link rel="preload" href="/MediaMolecule.PlayCMS.StudioTheme/fonts/Neucha.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <style>
+            /* Dark mode variables */
+            :root {
+                --colorWhite: #ffffff;
+                --colorBlack: #000000;
+                --colorPrimary: #ed2793;
+                --colorSecondary: #12bdff;
+                --colorDarkBlue: #1c3144;
+                --colorGrey: #595959;
+                --colorGreyLight: #efefef;
+                --colorTextDefault: var(--colorDarkBlue);
+                --colorTextInverted: #ffffff;
+                --colorTextLight: #888888;
+                --colorBackground: var(--colorWhite);
+                --colorSurface: var(--colorWhite);
+                --headerBackgroundColor: var(--colorWhite);
+                --headerBackgroundPattern: url(/media/Backgrounds/Patterns/pattern-leather-white-200w.jpg);
+            }
+            [data-theme="dark"] {
+                --colorWhite: #000000;
+                --colorBlack: #ffffff;
+                --colorTextDefault: #f0f0f0;
+                --colorTextInverted: #000000;
+                --colorTextLight: #aaaaaa;
+                --colorBackground: #1a1a2e;
+                --colorSurface: #16213e;
+                --headerBackgroundColor: #1a1a2e;
+                --headerBackgroundPattern: none;
+                --colorGreyLight: #2a2a4a;
+                --colorGrey: #888888;
+            }
+            [data-theme="dark"] .header,
+            [data-theme="dark"] .section__inner-shape,
+            [data-theme="dark"] .footer,
+            [data-theme="dark"] .nav--primary .nav__sub {
+                background-color: var(--headerBackgroundColor) !important;
+                background-image: var(--headerBackgroundPattern) !important;
+            }
+            [data-theme="dark"] .atom__molecule--shadowed {
+                box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 4px 24px rgba(0,0,0,0.4);
+            }
+            [data-theme="dark"] .card {
+                background-color: var(--colorSurface);
+                border-color: rgba(255,255,255,0.1);
+            }
+            [data-theme="dark"] .nav__item a,
+            [data-theme="dark"] .footer .nav__item a {
+                color: var(--colorTextDefault);
+            }
+            [data-theme="dark"] .nav__item a:hover,
+            [data-theme="dark"] .footer .nav__item a:hover {
+                color: var(--colorPrimary);
+            }
+        </style>
+
 
         
             <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage': 'denied','analytics_storage': 'denied'});</script>
@@ -59,6 +114,7 @@
 		<script async="true" src="/MediaMolecule.PlayCMS.StudioTheme/js/scripts.js?v=xSgtoYVamsreSNgUaW51AXLkP99Ff4Q8flUKEfyCsz0"></script>
 
         <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
 <link href="/site.webmanifest" rel="manifest" />
@@ -303,11 +359,7 @@
 
 
     <a href="/art" class=" link--default" >
-        <span class="nav__item-text">
-            Careers
-
-
-        </span>
+        <span class="nav__item-text">Art</span>
     </a>
 
 
@@ -2539,9 +2591,7 @@ is a digital playground where anything is possible.</p>
 
 
 <a href="/art" class="link--default" >
-    <span class="nav__item-text">
-        Careers
-    </span>
+    <span class="nav__item-text">Art</span>
 </a>
 
     

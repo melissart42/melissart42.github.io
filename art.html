@@ -5,25 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <title>Join the chat_42 Team | Opportunities and Careers</title>
-        <meta content="Join the chat_42 Team | Opportunities and Careers" name="title" />
-<meta content="Become a part of the chat_42 team, a multi award-winning AAA studio, and help shape the future of gaming. Explore career opportunities and open positions." name="description" />
-<meta content="website" name="og:type" />
-<meta content="/art" name="og:url" />
-<meta content="Join the chat_42 Team | Opportunities and Careers" name="og:title" />
-<meta content="Become a part of the chat_42 team, a multi award-winning AAA studio, and help shape the future of gaming. Explore career opportunities and open positions." name="og:description" />
-<meta content="/pacthwork.png" name="og:image" />
-<meta content="/pacthwork.png" name="image" property="og:image" />
-<meta content="summary_large_image" name="twitter:card" />
-<meta content="/art" name="twitter:url" />
-<meta content="Join the chat_42 Team | Opportunities and Careers" name="twitter:title" />
-<meta content="Become a part of the chat_42 team, a multi award-winning AAA studio, and help shape the future of gaming. Explore career opportunities and open positions." name="twitter:description" />
-<meta content="/pacthwork.png" name="twitter:image" />
-<meta content="#ffffff" name="msapplication-TileColor" />
-<meta content="#ffffff" name="theme-color" />
+        <title>Art & Illustrations | melissart</title>
+        <meta content="Art & Illustrations | melissart" name="title" />
+        <meta content="Galerie d'art et d'illustrations de melissart (Mellisa). Typography, illustrations numériques, sketches et expérimentations graphiques." name="description" />
+        <meta content="website" name="og:type" />
+        <meta content="/art" name="og:url" />
+        <meta content="Art & Illustrations | melissart" name="og:title" />
+        <meta content="Galerie d'art et d'illustrations de melissart. Typography, illustrations numériques, sketches et expérimentations graphiques." name="og:description" />
+        <meta content="/assets/img/steallikeaartiste.jpg" name="og:image" />
+        <meta content="/assets/img/steallikeaartiste.jpg" name="image" property="og:image" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta content="/art" name="twitter:url" />
+        <meta content="Art & Illustrations | melissart" name="twitter:title" />
+        <meta content="Galerie d'art et d'illustrations de melissart. Typography, illustrations numériques, sketches et expérimentations graphiques." name="twitter:description" />
+        <meta content="/assets/img/steallikeaartiste.jpg" name="twitter:image" />
+        <meta content="#ffffff" name="msapplication-TileColor" />
+        <meta content="#ffffff" name="theme-color" />
 
         <script>
-            // Picture element HTML5 shiv
             document.createElement( "picture" );
         </script>
 
@@ -42,158 +41,201 @@
 
         <link rel="preload" href="/MediaMolecule.PlayCMS.StudioTheme/fonts/Neucha.woff" as="font" type="font/woff" crossorigin="anonymous">
         <link rel="preload" href="/MediaMolecule.PlayCMS.StudioTheme/fonts/Neucha.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <style>
+            /* Dark mode variables */
+            :root {
+                --colorWhite: #ffffff;
+                --colorBlack: #000000;
+                --colorPrimary: #ed2793;
+                --colorSecondary: #12bdff;
+                --colorDarkBlue: #1c3144;
+                --colorGrey: #595959;
+                --colorGreyLight: #efefef;
+                --colorTextDefault: var(--colorDarkBlue);
+                --colorTextInverted: #ffffff;
+                --colorTextLight: #888888;
+                --colorBackground: var(--colorWhite);
+                --colorSurface: var(--colorWhite);
+                --headerBackgroundColor: var(--colorWhite);
+                --headerBackgroundPattern: url(/media/Backgrounds/Patterns/pattern-leather-white-200w.jpg);
+            }
+            [data-theme="dark"] {
+                --colorWhite: #000000;
+                --colorBlack: #ffffff;
+                --colorTextDefault: #f0f0f0;
+                --colorTextInverted: #000000;
+                --colorTextLight: #aaaaaa;
+                --colorBackground: #1a1a2e;
+                --colorSurface: #16213e;
+                --headerBackgroundColor: #1a1a2e;
+                --headerBackgroundPattern: none;
+                --colorGreyLight: #2a2a4a;
+                --colorGrey: #888888;
+            }
+            [data-theme="dark"] .header,
+            [data-theme="dark"] .section__inner-shape,
+            [data-theme="dark"] .footer,
+            [data-theme="dark"] .nav--primary .nav__sub {
+                background-color: var(--headerBackgroundColor) !important;
+                background-image: var(--headerBackgroundPattern) !important;
+            }
+            [data-theme="dark"] .atom__molecule--shadowed {
+                box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 4px 24px rgba(0,0,0,0.4);
+            }
+            [data-theme="dark"] .card {
+                background-color: var(--colorSurface);
+                border-color: rgba(255,255,255,0.1);
+            }
+            [data-theme="dark"] .nav__item a,
+            [data-theme="dark"] .footer .nav__item a {
+                color: var(--colorTextDefault);
+            }
+            [data-theme="dark"] .nav__item a:hover,
+            [data-theme="dark"] .footer .nav__item a:hover {
+                color: var(--colorPrimary);
+            }
 
+            /* Art Gallery Styles */
+            .art-gallery {
+                display: grid;
+                grid-template-columns: 1fr 300px;
+                gap: 2rem;
+                padding: 2rem 0;
+            }
+            @media (max-width: 1024px) {
+                .art-gallery {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .art-viewer {
+                position: sticky;
+                top: 2rem;
+                height: calc(100vh - 4rem);
+            }
+            .art-viewer img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+            }
+            [data-theme="dark"] .art-viewer img {
+                box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+            }
+            .art-viewer-placeholder {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--colorTextLight);
+                font-family: var(--fontFamilyHandwritten);
+                font-size: 1.5rem;
+                border: 2px dashed var(--colorGrey);
+                border-radius: 8px;
+            }
+            .art-thumbnails {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                max-height: calc(100vh - 4rem);
+                overflow-y: auto;
+            }
+            .art-album-nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 2rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid var(--colorGreyLight);
+            }
+            .art-album-link {
+                padding: 0.5rem 1rem;
+                background: var(--colorGreyLight);
+                border-radius: 2rem;
+                font-family: var(--fontFamilyHeading);
+                font-size: 0.875rem;
+                color: var(--colorTextDefault);
+                text-decoration: none;
+                transition: all 0.2s ease;
+                cursor: pointer;
+            }
+            .art-album-link:hover,
+            .art-album-link.active {
+                background: var(--colorPrimary);
+                color: var(--colorWhite);
+            }
+            [data-theme="dark"] .art-album-link {
+                background: var(--colorGrey);
+            }
+            [data-theme="dark"] .art-album-link:hover,
+            [data-theme="dark"] .art-album-link.active {
+                background: var(--colorPrimary);
+            }
+            .art-thumb {
+                width: 100%;
+                aspect-ratio: 4/3;
+                object-fit: cover;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                border: 2px solid transparent;
+            }
+            .art-thumb:hover {
+                transform: scale(1.02);
+                box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            }
+            .art-thumb.active {
+                border-color: var(--colorPrimary);
+            }
+            .art-caption {
+                margin-top: 0.5rem;
+                font-size: 0.75rem;
+                color: var(--colorTextLight);
+                font-family: var(--fontFamilyHandwritten);
+            }
+            .art-caption-title {
+                font-weight: 600;
+                color: var(--colorTextDefault);
+                display: block;
+            }
+            .art-info {
+                padding: 1rem;
+                background: var(--colorGreyLight);
+                border-radius: 8px;
+                margin-top: 1rem;
+            }
+            [data-theme="dark"] .art-info {
+                background: var(--colorGrey);
+            }
+            .art-info-title {
+                font-family: var(--fontFamilyHeading);
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+                color: var(--colorTextDefault);
+            }
+            .art-info-subtitle {
+                font-family: var(--fontFamilyHandwritten);
+                color: var(--colorTextLight);
+                font-size: 0.875rem;
+            }
+        </style>
         
             <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage': 'denied','analytics_storage': 'denied'});</script>
-
-            <!-- Google Tag Manager -->
-            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WKQMWQB');</script>
-            <!-- End Google Tag Manager -->
-        
-
-		
-		<script async="true" src="/MediaMolecule.PlayCMS.StudioTheme/js/scripts.js?v=xSgtoYVamsreSNgUaW51AXLkP99Ff4Q8flUKEfyCsz0"></script>
-
-        <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
-<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
-<link href="/site.webmanifest" rel="manifest" />
-<link color="#ed2793" href="/safari-pinned-tab.svg" rel="mask-icon" />
-<link as="image" href="/media/Backgrounds/Patterns/pattern-leather-white-200w.jpg" rel="preload" />
-        <link href="/MediaMolecule.PlayCMS.StudioTheme/css/styles.css?v=0JoX_XZTUrzmFFH8fmPeFFPPb_QyJ3a67zYZ0p2ho1g" rel="stylesheet" type="text/css" />
-        <script src="/Etch.OrchardCore.Greenhouse/js/greenhouse.js?v=YRn0iOMhvlaYg8pSUshODMk4qmC3xNjZQ_wtA4MTyWM"></script>
-<script>window.loadCivic=function(){var config = {
-  "apiKey": "e95230c8606caa72382d9a5ee561106f589042ef",
-  "product": "COMMUNITY",
-  "necessaryCookies": [],
-  "initialState": "open",
-  "notifyOnce": false,
-  "rejectButton": false,
-  "acceptBehaviour": "all",
-  "closeOnGlobalChange": true,
-  "layout": "slideout",
-  "position": "right",
-  "theme": "dark",
-  "toggleType": "slider",
-  "closeStyle": "icon",
-  "settingsStyle": "button",
-  "subDomains": true,
-  "text": {},
-  "optionalCookies": [
-    {
-      "name": "analytics",
-      "label": "Analytics",
-      "description": "Analytical cookies help us to improve our website by collecting and reporting information on its usage.",
-      "cookies": [
-        "_ga*",
-        "_gid",
-        "_gat",
-        "_utma",
-        "_utmt",
-        "_utmb",
-        "_utmc",
-        "_utmz",
-        "_utmv"
-      ],
-      "onAccept": function () { gtag('consent', 'update', {'analytics_storage': 'granted'});
- },
-      "onRevoke": function () { gtag('consent', 'update', {'analytics_storage': 'denied'});
- }
-    }
-  ]
-};CookieControl.load(config);}</script><script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js" onload="window.loadCivic()" async></script>
     </head>
-    <body class="animate">
-        
-            <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKQMWQB"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->
-        
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-    
-    
-
-    
-
-
-
-    
-    
-    
-
-    
-
-    
-
-
-
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-<header class="header header--backgrounded" style="--headerBackgroundColor:#ffffff; --headerBackgroundPattern: url(/media/Backgrounds/Patterns/pattern-leather-white-200w.jpg); --headerMobileBackgroundColor:#ffffff; ">
-    <div class="header__content constrain constrain--full">
-        
-            <a class="header__logo" href="/">
-                <picture>
+    <body>
+        <header class="header header--backgrounded" style="--headerBackgroundColor:#ffffff; --headerBackgroundPattern: url(/media/Backgrounds/Patterns/pattern-leather-white-200w.jpg); --headerMobileBackgroundColor:#ffffff; ">
+            <div class="header__content constrain constrain--full">
+                
+                <a class="header__logo" href="/">
+                    <picture>
+                        
+                        <img src="/chat.png" alt="chat_42 logo" class="header__logo-img" style="max-height:120px;width:auto;" />
                     
-                        <img src="/chat_42_v2.png" alt="chat_42 logo" />
-                    
-                </picture>
-            </a>
-        
+                    </picture>
+                </a>
+            
+            
             <div class="header__tools" style="display:flex;align-items:center;gap:1rem;margin-left:auto;">
                 <button type="button" class="header__lang-toggle" id="langToggle" aria-label="Changer de langue" style="background:none;border:none;cursor:pointer;padding:.5rem;font-family:var(--fontFamilyHeading);font-size:var(--fontSizeNavigation);color:var(--colorTextDefault);">
                     <span data-lang="fr">FR</span><span data-lang="en" style="display:none;">EN</span>
@@ -203,13 +245,12 @@
                 </button>
             </div>
 
+            
             <div class="header__logo-background-mask">
                 <svg viewBox="0 0 340 176" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.5544 176C30.5335 175.268 14.2086 172.001 0 165.9V0h340c-13.443 28.5353-45.745 68.2592-65.5 91.5-11.699 1.726-20.528 8.748-32.612 18.358C222.468 125.303 194.644 147.431 133 165c-24.293 6.398-47.2268 10.199-68.2329 11H48.5544Z"/></svg>
             </div>
-        
-
-        
-
+            
+            
             <button type="button" class="header__nav-button js-nav-button">Menu</button>
             <button type="button" class="header__nav-button header__nav-button--close js-nav-button">Close</button>
 
@@ -236,8 +277,8 @@
 
 
 <a href="/about" class="link--default" >
-    <span class="nav__item-text">
-        About
+    <span class="nav__item-text" data-i18n="nav.about">
+        À propos
     </span>
 </a>
 
@@ -259,8 +300,8 @@
 
 
 <a href="/games" class="" >
-    <span class="nav__item-text">
-        Games
+    <span class="nav__item-text" data-i18n="nav.games">
+        Jeux
     </span>
 </a>
 
@@ -281,8 +322,8 @@
 
 
 
-<a href="/blog" class="link--default" >
-    <span class="nav__item-text">
+<a href="/blog" class="" >
+    <span class="nav__item-text" data-i18n="nav.blog">
         Blog
     </span>
 </a>
@@ -297,2890 +338,382 @@
 
 
 
-<li class="nav__item nav__item--notification-menu-item">
+<li class="nav__item nav__item--content-menu-item">
     
     
     
 
 
-    <a href="/art" class=" link--default is-current-page" >
-        <span class="nav__item-text">
-            Careers
 
-
-        </span>
-    </a>
-
+<a href="/art" class="link--default" >
+    <span class="nav__item-text" data-i18n="nav.art">
+        Art
+    </span>
+</a>
 
     
 </li>
     
-</ul>
+        
+
+
+
+
+                        </ul>
                     </nav>
                     
-
-                    
                 </div>
-
-                <div class="header__nav-background"></div>
             </div>
-
-        
-    </div>
-</header>
-
+        </div>
+        </header>
 
         <main>
-            
-            
-
-
-
-
-
-
-<div class="flow">
-    <div class="flow__content">
-            <div class="align--center width--100">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    
-    
-
-
-
-
-    
-    
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-<section  class="hero hero--desktop-ratio-2-1 hero--tablet-ratio-3-2 hero--mobile-ratio-9-16 hero--horizontal-left hero--vertical-center hero--vertical-mobile-none " style="--heroBackgroundColor:#1c3144;  "  data-color="#1c3144">
-    <div class="hero__body constrain constrain--default">
-        
-
-
-<div class="flow">
-    <div class="flow__content">
-            <div class="align--center width--100">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-<h1 id="jobs-at-mm" aria-label="Jobs at Mm" class="heading " style="" >
-    
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-	
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-handwritten heading__chunk--style-none" style="--headingChunkColor:#ffffff; ">
-	Careers
-</span>
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-<span class="heading__chunk heading__chunk--font-typed heading__chunk--style-hanging-sign" style="">
-	@
-</span>
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-	
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-typed heading__chunk--style-tape" style="--headingChunkColor:#ed2793; ">
-	Mm
-</span>
-        
-    
-</h1>
-
-            </div>
-    </div>
-</div>
-
-    </div>
-            
-    
-        
-
-        <picture class="hero-responsive-media hero-responsive-media--background-image">
-                <source srcset="/media/Jobs/art-hero-2560w.jpg" media="(min-width: 1921px)" />
-                <source srcset="/media/Jobs/art-hero-2560w.jpg?width=1920" media="(min-width: 1441px)" />
-                <source srcset="/media/Jobs/art-hero-2560w.jpg?width=1440" media="(min-width: 1281px)" />
-                <source srcset="/media/Jobs/art-hero-2560w.jpg?width=1280" media="(min-width: 1025px)" />
-                <source srcset="/media/Jobs/art-hero-2560w.jpg?width=1024" media="(min-width: 769px)" />
-                <source srcset="/media/Jobs/art-hero-768w.jpg" media="(min-width: 601px)" />
-                <source srcset="/media/Jobs/art-hero-768w.jpg?width=600" media="(min-width: 426px)" />
-                <source srcset="/media/Jobs/art-hero-768w.jpg?width=425" media="(min-width: 376px)" />
-
-            <img src="/media/Jobs/art-hero-768w.jpg?width=375" loading=eager alt="" />
-        </picture>
-
-    
-
-    
-        <div class="hero__decorations decorations">
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--all" style="--decorativeImageX:38%; --decorativeImageY:70%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-2">
-        
-                <img class="decorative-image__img js-in-viewport grow-in grow-in--from-bottom" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 0ms; --animationDuration: 600ms;"  src="/media/Decorations/3D shapes/Shape-_0015_Hand.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-        </div>
-    
-
-    
-
-    <div class="hero__space"></div>
-</section>
-
-            </div>
-            <div class="width--100">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    
-
-
-
-    
-
-
-
-    
-
-
-
-    
-
-
-
-    
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-    
-
-
-
-
-<section  class="section section--spaced-after-none section--padding-top-none section--padding-bottom-none section--left section--vertical-center gutter--large section--inverted inverted large section--medium-vertical-flow-gutter section--stacked-vertical-flow-gutter-not-specified section--style-wavy " style="--sectionBackgroundColor:transparent; --sectionBackgroundPattern: url(/media/Backgrounds/Patterns/space-pattern-2560w.jpg);  " >
-    <div class="section__outer-shape">
-        <div class="section__inner-shape">
-            <div class="section__content constrain constrain--default">
-                
-
-
-<div class="flow">
-    <div class="flow__content">
-            <div class="align--center width--50">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-<h2 id="start-your-journey-at-media-molecule" aria-label="Start your journey at chat_42" class="heading " style="" >
-    
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-<span class="heading__chunk heading__chunk--font-handwritten heading__chunk--style-none" style="">
-	Start
-</span>
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-    
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-handwritten heading__chunk--style-highlight" style="--headingChunkStyleColor:#f9aa2a; ">
-	your
-</span>
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-<span class="heading__chunk heading__chunk--font-handwritten heading__chunk--style-none" style="">
-	journey
-</span>
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-    
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-typed heading__chunk--style-rainbow" style="--headingChunkStyleColor:#ed2793; ">
-	@
-</span>
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-	
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-typed heading__chunk--style-none" style="--headingChunkColor:#ed2793; ">
-	chat_42
-</span>
-        
-    
-</h2>
-
-            </div>
-            <div class="width--50">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="group " style="--groupBackgroundColor:transparent;  " >
-    
-    
-
-
-    <p>As a multi-award-winning AAA studio
-renowned in the industry for our creativity, innovative spirit and inclusive
-culture, we are always on the lookout for talented people to bring new ideas,
-perspectives (and personalities!) to the team. Take a look at our latest
-opportunities and come join us as we push the boundaries of creative gaming!</p>
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-<a href="#current-positions"  class="link btn btn--primary " style=""  >
-    Show me the jobs!
-
-    
-</a>
-
-
-</div>
-
-            </div>
-    </div>
-</div>
-
-            </div>
-        </div>
-    </div>
-
-    
-        <div class="section__decorations decorations">
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:27%; --decorativeImageY:60%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="2">
-        
-                <img class="decorative-image__img " style=""  src="/media/Decorations/Scribbles/BlueScribbleSheet_0000_Zigzag-line.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:0%; --decorativeImageY:30%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="1">
-        
-                <img class="decorative-image__img " style=""  src="/media/Decorations/Mobile Decorations/BlueScribbleSheet_0000_Zigzag-line.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-        </div>
-    
-
-    
-
-
-
-
-</section>
-
-            </div>
-            <div class="width--100">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-<section  class="section section--spaced-after-none section--padding-top-large section--padding-bottom-none default section--no-vertical-flow-gutter section--stacked-vertical-flow-gutter-not-specified section--style-none " style="--sectionBackgroundColor:transparent;  " >
-    <div class="section__outer-shape">
-        <div class="section__inner-shape">
-            <div class="section__content constrain constrain--thin">
-                
-
-
-<div class="flow">
-    <div class="flow__content">
-            <div class="width--100">
-                <div style="height: 6rem;" class="responsive-display--small-only"></div>
-            </div>
-            <div class="align--center width--100">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-<h2 id="we-are-passionate-about-play" aria-label="We are passionate about play" class="heading " style="" >
-    
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-<span class="heading__chunk heading__chunk--font-typed heading__chunk--style-none" style="">
-	We are
-</span>
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-	
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-handwritten heading__chunk--style-none" style="--headingChunkColor:#ed2793; ">
-	passionate
-</span>
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-<span class="heading__chunk heading__chunk--font-typed heading__chunk--style-none" style="">
-	about play
-</span>
-        
-    
-</h2>
-
-            </div>
-            <div class="align--center width--100">
-                
-
-
-
-
-    <p class="" style="" >Mm isn't all (just) pink carpets and ice cream - we take our work seriously!</p>
-
-            </div>
-            <div class="align--center width--100">
-                
-
-
-
-
-    <p class="" style="" >Our values are fundamental to what makes Mm an award-winning studio, empowering our people while continuously striving for excellence. </p>
-
-            </div>
-    </div>
-</div>
-
-            </div>
-        </div>
-    </div>
-
-    
-        <div class="section__decorations decorations">
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:10%; --decorativeImageY:40%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="2">
-        
-                <img class="decorative-image__img " style=""  src="/media/Homepage/Hero Atom/rainbow-shoe.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:10%; --decorativeImageY:40%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="1">
-        
-                <img class="decorative-image__img " style=""  src="/media/Homepage/Hero Atom Mobile/rainbow-shoe.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:95%; --decorativeImageY:60%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-2">
-        
-                <img class="decorative-image__img " style=""  src="/media/Homepage/Hero Atom/zigzag-light-blue.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:95%; --decorativeImageY:40%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
-        
-                <img class="decorative-image__img " style=""  src="/media/Homepage/Hero Atom Mobile/zigzag-light-blue.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:50%; --decorativeImageY:30%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img " style=""  src="/media/Decorations/Scribbles/BlueScribbleSheet_0018_Smile.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-        </div>
-    
-
-    
-
-
-
-
-</section>
-
-            </div>
-            <div class="width--100">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-    
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-<section  class="section section--spaced-after-none section--center gutter--large large section--large-vertical-flow-gutter section--medium-stacked-vertical-flow-gutter section--style-none " style="--sectionBackgroundColor:transparent;  " >
-    <div class="section__outer-shape">
-        <div class="section__inner-shape">
-            <div class="section__content constrain constrain--wide">
-                
-
-
-<div class="flow">
-    <div class="flow__content">
-            <div class="width--33">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="group " style="--groupBackgroundColor:transparent;  " >
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id="inclusivity" aria-label="Inclusivity" class="heading " style="" >
-    
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-<span class="heading__chunk heading__chunk--font-handwritten heading__chunk--style-rainbow" style="">
-	Inclusivity
-</span>
-        
-    
-</h3>
-
-
-    
-
-
-    <p>Central to our studio and product design. We foster a safe and positive space at work and within our communities, enabling people to be their authentic selves.</p>
-
-
-
-</div>
-
-            </div>
-            <div class="width--33">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="group " style="--groupBackgroundColor:transparent;  " >
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id="collaboration" aria-label="Collaboration" class="heading " style="" >
-    
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-	
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-typed heading__chunk--style-none" style="--headingChunkColor:#12bdff; ">
-	Collaboration
-</span>
-        
-    
-</h3>
-
-
-    
-
-
-    <p>We delight in open collaboration and drive innovation with creative jamming, in the studio and with our community.</p>
-
-
-
-</div>
-
-            </div>
-            <div class="width--33">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="group " style="--groupBackgroundColor:transparent;  " >
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id="aspiration" aria-label="Aspiration" class="heading " style="" >
-    
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-	
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-handwritten heading__chunk--style-tape" style="--headingChunkColor:#ed2793; ">
-	Aspiration
-</span>
-        
-    
-</h3>
-
-
-    
-
-
-    <p>We are positively ambitious and take creative risks, allowing us to build games which delight our audiences and bring success to our people.</p>
-
-
-
-</div>
-
-            </div>
-            <div class="width--40">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="group " style="--groupBackgroundColor:transparent;  " >
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-<h3 id="creativity" aria-label="Creativity" class="heading text--h3 " style="" >
-    
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-    
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-handwritten heading__chunk--style-highlight" style="--headingChunkStyleColor:#eefd1c; ">
-	Creativity
-</span>
-        
-    
-</h3>
-
-
-    
-
-
-    <p>We seek originality by empowering creative exploration at all levels and across disciplines to generate new creative sparks and contribute to the overall success of the studio.</p>
-
-
-
-</div>
-
-            </div>
-            <div class="width--40">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="group " style="--groupBackgroundColor:transparent;  " >
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id="respect" aria-label="Respect" class="heading " style="" >
-    
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-    
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-typed heading__chunk--style-hanging-sign" style="--headingChunkStyleColor:#1c3144; ">
-	Respect
-</span>
-        
-    
-</h3>
-
-
-    
-
-
-    <p>In our game design, people's time, work, feedback, culture, wellbeing, the planet... We show respect for our peers and players, maintaining a positive and ethical studio culture.</p>
-
-
-
-</div>
-
-            </div>
-    </div>
-</div>
-
-            </div>
-        </div>
-    </div>
-
-    
-        <div class="section__decorations decorations">
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:5%; --decorativeImageY:65%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img " style=""  src="/media/Homepage/Hero Atom/smiley-face.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:5%; --decorativeImageY:90%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img " style=""  src="/media/Homepage/Hero Atom Mobile/smiley-face.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:95%; --decorativeImageY:50%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img " style=""  src="/media/Homepage/Hero Atom/bafta-mask.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:95%; --decorativeImageY:88%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img " style=""  src="/media/Homepage/Hero Atom Mobile/bafta-mask.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-        </div>
-    
-
-    
-
-
-
-
-</section>
-
-            </div>
-            <div class="width--100">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-    
-
-
-
-
-<section  class="section section--spaced-after-none default section--medium-vertical-flow-gutter section--stacked-vertical-flow-gutter-not-specified section--style-torn " style="--sectionBackgroundColor:transparent; --sectionBackgroundPattern: url(/media/Backgrounds/Patterns/pattern-leather-white-200w.jpg);  " >
-    <div class="section__outer-shape">
-        <div class="section__inner-shape">
-            <div class="section__content constrain constrain--default">
-                
-
-
-<div class="flow">
-    <div class="flow__content">
-            <div class="align--left width--100">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-<h2 id="current-positions" aria-label="Current positions" class="heading " style="" >
-    
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-    
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-handwritten heading__chunk--style-torn" style="--headingChunkStyleColor:#ed2793; ">
-	Current
-</span>
-        
-            
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-		
-	
-
-	
-
-
-<span class="heading__chunk heading__chunk--font-typed heading__chunk--style-none" style="--headingChunkColor:#1c3144; ">
-	positions
-</span>
-        
-    
-</h2>
-
-            </div>
-            <div class="width--100">
-                
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-            </div>
-    </div>
-</div>
-
-            </div>
-        </div>
-    </div>
-
-    
-        <div class="section__decorations decorations">
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:90%; --decorativeImageY:15%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-2">
-        
-                <img class="decorative-image__img " style=""  src="/media/Backgrounds/Atoms/Outer/confetti.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:90%; --decorativeImageY:15%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
-        
-                <img class="decorative-image__img " style=""  src="/media/Decorations/Mobile Decorations/confetti-right.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:90%; --decorativeImageY:20%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="3">
-        
-                <img class="decorative-image__img " style=""  src="/media/Decorations/3D shapes/Rectangle.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-                
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:100%; --decorativeImageY:20%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="2">
-        
-                <img class="decorative-image__img " style=""  src="/media/Decorations/Mobile Decorations/Rectangle.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-            
-        </div>
-    
-
-    
-
-
-
-
-</section>
-
-            </div>
-    </div>
-</div>
-
-
-            
+            <section class="section section--padding-top-large section--padding-bottom-large">
+                <div class="section__outer-shape">
+                    <div class="section__inner-shape">
+                        <div class="section__content constrain">
+                            
+                            <header class="art-head" style="margin-bottom: 2rem;">
+                                <h1 class="mast-big" style="font-family: var(--fontFamilyHeading); font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; margin-bottom: 1rem; color: var(--colorTextDefault);">ARTWORKS</h1>
+                                <hr class="mast-rule" style="border: none; border-top: 2px solid var(--colorPrimary); width: 60px; margin-bottom: 1.5rem;">
+                                
+                                <nav class="alb-sel art-album-nav" id="albumNav" role="tablist">
+                                    <button class="art-album-link active" data-album="typographie" role="tab" aria-selected="true">Typography</button>
+                                    <button class="art-album-link" data-album="illustrations" role="tab" aria-selected="false">Illustrations</button>
+                                    <button class="art-album-link" data-album="digital" role="tab" aria-selected="false">Digital Art</button>
+                                    <button class="art-album-link" data-album="sketches" role="tab" aria-selected="false">Sketches</button>
+                                </nav>
+                            </header>
+
+                            <div class="art-gallery">
+                                <!-- Main Viewer -->
+                                <div class="art-viewer" id="artViewer">
+                                    <div class="art-viewer-placeholder" id="viewerPlaceholder">
+                                        Sélectionnez une image pour la voir en grand
+                                    </div>
+                                    <img id="mainImage" src="" alt="" style="display:none;">
+                                    <div class="art-info" id="artInfo" style="display:none;">
+                                        <div class="art-info-title" id="artTitle"></div>
+                                        <div class="art-info-subtitle" id="artSubtitle"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Thumbnails Sidebar -->
+                                <div class="art-thumbnails" id="artThumbnails">
+                                    <!-- Thumbnails will be injected here -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-
-    
-
-
-<footer class="footer footer--inverted inverted footer--style-torn">
-    <div class="footer__shape">
-        <div class="footer__content constrain constrain--full" style="--footerBackgroundColor:#0d1821; ">
-            
-
-
-<div class="flow">
-    <div class="flow__content">
-            <div class="width--50">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="group " style="--groupBackgroundColor:transparent;  " >
-    
-    
-
-
-
-
-
-
-
-
-
-<nav class="nav  nav--footer-menu nav--display-horizontal nav--display-mobile-vertical" role="navigation">
-    <ul class="nav__items js-nav">
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--content-menu-item">
-    
-    
-    
-
-
-
-<a href="/about" class="link--default" >
-    <span class="nav__item-text">
-        About
-    </span>
-</a>
-
-    
-</li>
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--content-menu-item">
-    
-    
-    
-
-
-
-<a href="/games" class="link--default" >
-    <span class="nav__item-text">
-        Games
-    </span>
-</a>
-
-    
-</li>
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--content-menu-item">
-    
-    
-    
-
-
-
-<a href="/art" class="is-current-page link--default" >
-    <span class="nav__item-text">
-        Careers
-    </span>
-</a>
-
-    
-</li>
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--content-menu-item">
-    
-    
-    
-
-
-
-<a href="/blog-archive" class="link--default" >
-    <span class="nav__item-text">
-        Blog Archive
-    </span>
-</a>
-
-    
-</li>
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--content-menu-item">
-    
-    
-    
-
-
-
-<a href="/press" class="link--default" >
-    <span class="nav__item-text">
-        Press
-    </span>
-</a>
-
-    
-</li>
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--link-menu-item">
-    
-    
-    
-
-
-
-
-
-
-    
-
-
-
-    <a href="/tearaway-papercraft" class="link--default" >Tearaway Papercraft</a>
-
-
-
-    
-</li>
-    
-</ul>
-</nav>
-
-    <br />
-
-    
-
-
-
-
-
-
-
-
-
-<nav class="nav  nav--social-menu nav--display-horizontal nav--display-mobile-horizontal" role="navigation">
-    <ul class="nav__items js-nav">
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--s-v-g-menu-item">
-    
-    
-    
-
-<a href="https://twitter.com/mediamolecule" 
-   class=""
-   title="Twitter logo - click to view our Twitter profile"
-   aria-label="Twitter logo - click to view our Twitter profile"
-    target="_blank" rel="noopener noreferrer" >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M23.706 5.18952C22.871 5.55952 21.974 5.80952 21.031 5.92252C22.004 5.34031 22.7319 4.42398 23.079 3.34452C22.1648 3.88751 21.1643 4.26971 20.121 4.47452C19.4194 3.72538 18.4901 3.22884 17.4773 3.06199C16.4646 2.89514 15.4251 3.06731 14.5202 3.55177C13.6154 4.03623 12.8958 4.80588 12.4732 5.74122C12.0505 6.67656 11.9485 7.72527 12.183 8.72452C10.3307 8.63151 8.51863 8.15007 6.86442 7.31142C5.21022 6.47278 3.75084 5.29568 2.581 3.85652C2.181 4.54652 1.951 5.34652 1.951 6.19852C1.95055 6.96551 2.13943 7.72076 2.50088 8.39725C2.86232 9.07374 3.38516 9.65056 4.023 10.0765C3.28328 10.053 2.55987 9.8531 1.913 9.49352V9.55352C1.91293 10.6293 2.28503 11.6719 2.96618 12.5045C3.64733 13.3371 4.59557 13.9084 5.65 14.1215C4.96378 14.3072 4.24434 14.3346 3.546 14.2015C3.8435 15.1271 4.423 15.9365 5.20337 16.5164C5.98374 17.0963 6.92592 17.4177 7.898 17.4355C6.24783 18.7309 4.20989 19.4336 2.112 19.4305C1.74038 19.4306 1.36908 19.4089 1 19.3655C3.12948 20.7347 5.60834 21.4613 8.14 21.4585C16.71 21.4585 21.395 14.3605 21.395 8.20452C21.395 8.00452 21.39 7.80252 21.381 7.60252C22.2923 6.94349 23.0789 6.12741 23.704 5.19252L23.706 5.18952Z"/>
-</svg>
-</a>
-
-
-    
-</li>
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--s-v-g-menu-item">
-    
-    
-    
-
-<a href="https://www.facebook.com/mediamolecule" 
-   class=""
-   title="Facebook logo - click to view our Facebook page"
-   aria-label="Facebook logo - click to view our Facebook page"
-    target="_blank" rel="noopener noreferrer" >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.067C0 18.033 4.333 22.994 10 24V15.333H7V12H10V9.333C10 6.333 11.933 4.667 14.667 4.667C15.533 4.667 16.467 4.8 17.333 4.933V8H15.8C14.333 8 14 8.733 14 9.667V12H17.2L16.667 15.333H14V24C19.667 22.994 24 18.034 24 12.067C24 5.43 18.6 0 12 0C5.4 0 0 5.43 0 12.067Z"/>
-</svg>
-</a>
-
-
-    
-</li>
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--s-v-g-menu-item">
-    
-    
-    
-
-<a href="https://www.instagram.com/mediamolecule/" 
-   class=""
-   title="Instagram logo - click to view our Instagram page"
-   aria-label="Instagram logo - click to view our Instagram page"
-    target="_blank" rel="noopener noreferrer" >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7.465 1.066C8.638 1.012 9.012 1 12 1C14.988 1 15.362 1.013 16.534 1.066C17.706 1.119 18.506 1.306 19.206 1.577C19.939 1.854 20.604 2.287 21.154 2.847C21.714 3.396 22.146 4.06 22.422 4.794C22.694 5.494 22.88 6.294 22.934 7.464C22.988 8.639 23 9.013 23 12C23 14.988 22.987 15.362 22.934 16.535C22.881 17.705 22.694 18.505 22.422 19.205C22.146 19.9391 21.7133 20.6042 21.154 21.154C20.604 21.714 19.939 22.146 19.206 22.422C18.506 22.694 17.706 22.88 16.536 22.934C15.362 22.988 14.988 23 12 23C9.012 23 8.638 22.987 7.465 22.934C6.295 22.881 5.495 22.694 4.795 22.422C4.06092 22.146 3.39582 21.7133 2.846 21.154C2.28638 20.6047 1.85331 19.9399 1.577 19.206C1.306 18.506 1.12 17.706 1.066 16.536C1.012 15.361 1 14.987 1 12C1 9.012 1.013 8.638 1.066 7.466C1.119 6.294 1.306 5.494 1.577 4.794C1.85372 4.06008 2.28712 3.39531 2.847 2.846C3.39604 2.2865 4.06047 1.85344 4.794 1.577C5.494 1.306 6.294 1.12 7.464 1.066H7.465ZM16.445 3.046C15.285 2.993 14.937 2.982 12 2.982C9.063 2.982 8.715 2.993 7.555 3.046C6.482 3.095 5.9 3.274 5.512 3.425C4.999 3.625 4.632 3.862 4.247 4.247C3.88205 4.60205 3.60118 5.03428 3.425 5.512C3.274 5.9 3.095 6.482 3.046 7.555C2.993 8.715 2.982 9.063 2.982 12C2.982 14.937 2.993 15.285 3.046 16.445C3.095 17.518 3.274 18.1 3.425 18.488C3.601 18.965 3.882 19.398 4.247 19.753C4.602 20.118 5.035 20.399 5.512 20.575C5.9 20.726 6.482 20.905 7.555 20.954C8.715 21.007 9.062 21.018 12 21.018C14.938 21.018 15.285 21.007 16.445 20.954C17.518 20.905 18.1 20.726 18.488 20.575C19.001 20.375 19.368 20.138 19.753 19.753C20.118 19.398 20.399 18.965 20.575 18.488C20.726 18.1 20.905 17.518 20.954 16.445C21.007 15.285 21.018 14.937 21.018 12C21.018 9.063 21.007 8.715 20.954 7.555C20.905 6.482 20.726 5.9 20.575 5.512C20.375 4.999 20.138 4.632 19.753 4.247C19.3979 3.88207 18.9657 3.60121 18.488 3.425C18.1 3.274 17.518 3.095 16.445 3.046ZM10.595 15.391C11.3797 15.7176 12.2534 15.7617 13.0669 15.5157C13.8805 15.2697 14.5834 14.7489 15.0556 14.0422C15.5278 13.3356 15.7401 12.4869 15.656 11.6411C15.572 10.7953 15.197 10.005 14.595 9.405C14.2112 9.02148 13.7472 8.72781 13.2363 8.54515C12.7255 8.36248 12.1804 8.29536 11.6405 8.34862C11.1006 8.40187 10.5792 8.57418 10.1138 8.85313C9.64845 9.13208 9.25074 9.51074 8.9493 9.96185C8.64786 10.413 8.45019 10.9253 8.37052 11.462C8.29084 11.9986 8.33115 12.5463 8.48854 13.0655C8.64593 13.5847 8.91648 14.0626 9.28072 14.4647C9.64496 14.8668 10.0938 15.1832 10.595 15.391ZM8.002 8.002C8.52702 7.47697 9.15032 7.0605 9.8363 6.77636C10.5223 6.49222 11.2575 6.34597 12 6.34597C12.7425 6.34597 13.4777 6.49222 14.1637 6.77636C14.8497 7.0605 15.473 7.47697 15.998 8.002C16.523 8.52702 16.9395 9.15032 17.2236 9.8363C17.5078 10.5223 17.654 11.2575 17.654 12C17.654 12.7425 17.5078 13.4777 17.2236 14.1637C16.9395 14.8497 16.523 15.473 15.998 15.998C14.9377 17.0583 13.4995 17.654 12 17.654C10.5005 17.654 9.06234 17.0583 8.002 15.998C6.94166 14.9377 6.34597 13.4995 6.34597 12C6.34597 10.5005 6.94166 9.06234 8.002 8.002ZM18.908 7.188C19.0381 7.06527 19.1423 6.91768 19.2143 6.75397C19.2863 6.59027 19.3248 6.41377 19.3274 6.23493C19.33 6.05609 19.2967 5.87855 19.2295 5.71281C19.1622 5.54707 19.0624 5.39651 18.936 5.27004C18.8095 5.14357 18.6589 5.04376 18.4932 4.97652C18.3275 4.90928 18.1499 4.87598 17.9711 4.87858C17.7922 4.88119 17.6157 4.91965 17.452 4.9917C17.2883 5.06374 17.1407 5.1679 17.018 5.298C16.7793 5.55103 16.6486 5.88712 16.6537 6.23493C16.6588 6.58274 16.7992 6.91488 17.0452 7.16084C17.2911 7.40681 17.6233 7.54723 17.9711 7.5523C18.3189 7.55737 18.655 7.42669 18.908 7.188Z"/>
-</svg>
-</a>
-
-
-    
-</li>
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--s-v-g-menu-item">
-    
-    
-    
-
-<a href="https://www.linkedin.com/company/media-molecule-limited/" 
-   class=""
-   title="LinkedIn logo - click to view our LinkedIn page"
-   aria-label="LinkedIn logo - click to view our LinkedIn page"
-   >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.838C1 2.35053 1.19365 1.88303 1.53834 1.53834C1.88303 1.19365 2.35053 1 2.838 1H21.16C21.4016 0.999608 21.6409 1.04687 21.8641 1.13907C22.0874 1.23127 22.2903 1.36661 22.4612 1.53734C22.6322 1.70807 22.7677 1.91083 22.8602 2.13401C22.9526 2.3572 23.0001 2.59643 23 2.838V21.16C23.0003 21.4016 22.9529 21.6409 22.8606 21.8642C22.7683 22.0875 22.6328 22.2904 22.462 22.4613C22.2912 22.6322 22.0884 22.7678 21.8651 22.8602C21.6419 22.9526 21.4026 23.0001 21.161 23H2.838C2.59655 23 2.35746 22.9524 2.1344 22.86C1.91134 22.7676 1.70867 22.6321 1.53798 22.4613C1.3673 22.2905 1.23193 22.0878 1.13962 21.8647C1.04731 21.6416 0.999869 21.4025 1 21.161V2.838ZM9.708 9.388H12.687V10.884C13.117 10.024 14.217 9.25 15.87 9.25C19.039 9.25 19.79 10.963 19.79 14.106V19.928H16.583V14.822C16.583 13.032 16.153 12.022 15.061 12.022C13.546 12.022 12.916 13.111 12.916 14.822V19.928H9.708V9.388ZM4.208 19.791H7.416V9.25H4.208V19.79V19.791ZM7.875 5.812C7.88105 6.08668 7.83217 6.35979 7.73124 6.61532C7.63031 6.87084 7.47935 7.10364 7.28723 7.30003C7.09511 7.49643 6.8657 7.65248 6.61246 7.75901C6.35921 7.86554 6.08724 7.92042 5.8125 7.92042C5.53776 7.92042 5.26579 7.86554 5.01255 7.75901C4.7593 7.65248 4.52989 7.49643 4.33777 7.30003C4.14565 7.10364 3.99469 6.87084 3.89376 6.61532C3.79283 6.35979 3.74395 6.08668 3.75 5.812C3.76187 5.27286 3.98439 4.75979 4.36989 4.38269C4.75539 4.00558 5.27322 3.79442 5.8125 3.79442C6.35178 3.79442 6.86961 4.00558 7.25512 4.38269C7.64062 4.75979 7.86313 5.27286 7.875 5.812Z"/>
-</svg>
-</a>
-
-
-    
-</li>
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--s-v-g-menu-item">
-    
-    
-    
-
-<a href="https://www.twitch.tv/media_molecule" 
-   class=""
-   title="Twitch logo - watch our latest streams"
-   aria-label="Twitch logo - watch our latest streams"
-   >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M2.547 1L1 4.776V20.209H6.5V23H9.593L12.515 20.209H16.985L23 14.462V1H2.547ZM20.937 13.478L17.499 16.761H12L9.078 19.552V16.762H4.438V2.97H20.937V13.478ZM17.499 6.747V12.487H15.437V6.747H17.5H17.499ZM12 6.747V12.487H9.938V6.747H12Z"/>
-</svg>
-</a>
-
-
-    
-</li>
-    
-        
-
-
-
-
-
-
-<li class="nav__item nav__item--s-v-g-menu-item">
-    
-    
-    
-
-<a href="https://www.youtube.com/user/chat_42" 
-   class=""
-   title="YouTube logo - watch our latest videos"
-   aria-label="YouTube logo - watch our latest videos"
-    target="_blank" rel="noopener noreferrer" >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_26_367)">
-<path d="M23.5 6.50701C23.3641 6.02225 23.0994 5.58336 22.734 5.23702C22.3583 4.88002 21.8978 4.62465 21.396 4.49501C19.518 4.00001 11.994 4.00002 11.994 4.00002C8.85734 3.96433 5.72144 4.12129 2.60401 4.47001C2.1022 4.60923 1.64257 4.8703 1.26601 5.23002C0.896007 5.58601 0.628007 6.02502 0.488007 6.50602C0.1517 8.31776 -0.0117011 10.1574 6.83166e-06 12C-0.0119932 13.841 0.151007 15.68 0.488007 17.494C0.625007 17.973 0.892007 18.41 1.26301 18.763C1.63401 19.116 2.09601 19.371 2.60401 19.506C4.50701 20 11.994 20 11.994 20C15.1347 20.0358 18.2746 19.8788 21.396 19.53C21.8978 19.4004 22.3583 19.145 22.734 18.788C23.104 18.435 23.367 17.996 23.499 17.518C23.8441 15.707 24.0119 13.8666 24 12.023C24.026 10.1716 23.8584 8.32258 23.5 6.50602V6.50701ZM9.60201 15.424V8.57701L15.862 12.001L9.60201 15.424Z"/>
-</g>
-<defs>
-<clipPath id="clip0_26_367">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-</a>
-
-
-    
-</li>
-    
-</ul>
-</nav>
-
-</div>
-
+        <footer class="footer" style="--footerBackgroundColor:#1c3144; --footerColor:#ffffff; --footerColorInverted:#1c3144; ">
+            <div class="footer__outer-shape">
+                <div class="footer__inner-shape">
+                    <div class="footer__content constrain">
+                        <div class="footer__main">
+                            <div class="footer__brand">
+                                <a href="/" class="footer__logo">
+                                    <img src="/chat.png" alt="chat_42 logo" style="max-height:60px;width:auto;">
+                                </a>
+                                <p class="footer__tagline">Design & Typographie</p>
+                            </div>
+                            <nav class="nav footer__nav">
+                                <ul class="nav__items">
+                                    <li class="nav__item"><a href="/about" class="link--default" data-i18n="nav.about">À propos</a></li>
+                                    <li class="nav__item"><a href="/blog" class="link--default" data-i18n="nav.blog">Blog</a></li>
+                                    <li class="nav__item"><a href="/art" class="link--default" data-i18n="nav.art">Art</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__bottom">
+                            <p class="footer__copyright">&copy; 2026 melissart. Tous droits réservés.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="width--50">
+        </footer>
+
+        <link rel="stylesheet" href="/MediaMolecule.PlayCMS.StudioTheme/css/styles.css?v=0JoX_XZTUrzmFFH8fmPeFFPPb_QyJ3a67zYZ0p2ho1g" />
+        <script src="/MediaMolecule.PlayCMS.StudioTheme/js/scripts.js?v=xSgtoYVamsreSNgUaW51AXLkP99Ff4Q8flUKEfyCsz0" defer></script>
+
+    <script>
+        (function() {
+            // Language toggle
+            const langToggle = document.getElementById('langToggle');
+            const langSpans = langToggle ? langToggle.querySelectorAll('[data-lang]') : [];
+            let currentLang = 'fr';
+
+            const translations = {
+                fr: {
+                    nav: { about: 'À propos', games: 'Jeux', blog: 'Blog', art: 'Art' },
+                    hero: { 
+                        title: { part1: 'Bienvenue', part2: 'melissart' }, 
+                        subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
+                        cta: 'À propos de Mellisa' 
+                    },
+                    blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
+                },
+                en: {
+                    nav: { about: 'About', games: 'Games', blog: 'Blog', art: 'Art' },
+                    hero: { 
+                        title: { part1: 'Welcome', part2: 'melissart' }, 
+                        subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
+                        cta: 'About Mellisa' 
+                    },
+                    blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
+                }
+            };
+
+            function applyLanguage(lang) {
+                document.documentElement.lang = lang;
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.dataset.i18n;
+                    const keys = key.split('.');
+                    let value = translations[lang];
+                    for (const k of keys) { value = value?.[k]; }
+                    if (value) el.textContent = value;
+                });
+                langSpans.forEach(s => s.style.display = s.dataset.lang === lang ? '' : 'none');
+                currentLang = lang;
+                localStorage.setItem('lang', lang);
+            }
+
+            if (langToggle) {
+                langToggle.addEventListener('click', () => {
+                    applyLanguage(currentLang === 'fr' ? 'en' : 'fr');
+                });
+            }
+
+            // Dark mode toggle
+            const themeToggle = document.getElementById('themeToggle');
+            const themeSpans = themeToggle ? themeToggle.querySelectorAll('[data-theme]') : [];
+
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                themeSpans.forEach(s => s.style.display = s.dataset.theme === theme ? '' : 'none');
+                localStorage.setItem('theme', theme);
+            }
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const current = document.documentElement.getAttribute('data-theme') || 'light';
+                    applyTheme(current === 'light' ? 'dark' : 'light');
+                });
+            }
+
+            // Initialize from localStorage
+            const savedLang = localStorage.getItem('lang');
+            if (savedLang) applyLanguage(savedLang);
+
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            applyTheme(savedTheme);
+
+            // Art Gallery Logic
+            const albums = {
+                typographie: {
+                    title: "Typography",
+                    images: [
+                        { src: "/assets/img/jeunecrack.svg", thumb: "/assets/img/jeunecrack.svg", title: "JeuneCrack", subtitle: "Police pour programme cybersec", date: "2026" },
+                        { src: "/assets/img/affiche-typo.svg", thumb: "/assets/img/affiche-typo.svg", title: "Affiche Typographique", subtitle: "Expérimentation typographique", date: "2026" },
+                        { src: "/assets/img/cafe-identite.svg", thumb: "/assets/img/cafe-identite.svg", title: "Identité Café", subtitle: "Lettering & branding", date: "2025" }
+                    ]
+                },
+                illustrations: {
+                    title: "Illustrations",
+                    images: [
+                        { src: "/assets/img/steallikeaartiste.jpg", thumb: "/assets/img/steallikeaartiste.jpg", title: "Voler comme un artiste", subtitle: "Illustration inspirée du livre", date: "2026" }
+                    ]
+                },
+                digital: {
+                    title: "Digital Art",
+                    images: [
+                        { src: "/assets/img/steallikeaartiste.jpg", thumb: "/assets/img/steallikeaartiste.jpg", title: "Digital Experiment", subtitle: "Procreate / iPad", date: "2026" }
+                    ]
+                },
+                sketches: {
+                    title: "Sketches",
+                    images: [
+                        { src: "/assets/img/steallikeaartiste.jpg", thumb: "/assets/img/steallikeaartiste.jpg", title: "Carnet de croquis", subtitle: "Papier & crayon", date: "2025" }
+                    ]
+                }
+            };
+
+            let currentAlbum = 'typographie';
+            let currentImageIndex = 0;
+
+            const albumNav = document.getElementById('albumNav');
+            const artViewer = document.getElementById('artViewer');
+            const mainImage = document.getElementById('mainImage');
+            const viewerPlaceholder = document.getElementById('viewerPlaceholder');
+            const artInfo = document.getElementById('artInfo');
+            const artTitle = document.getElementById('artTitle');
+            const artSubtitle = document.getElementById('artSubtitle');
+            const artThumbnails = document.getElementById('artThumbnails');
+
+            function renderAlbum(albumKey) {
+                currentAlbum = albumKey;
+                const album = albums[albumKey];
                 
+                // Update active album button
+                document.querySelectorAll('.art-album-link').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.album === albumKey);
+                    btn.setAttribute('aria-selected', btn.dataset.album === albumKey);
+                });
 
+                // Render thumbnails
+                artThumbnails.innerHTML = album.images.map((img, idx) => `
+                    <div class="art-thumb-wrapper" data-index="${idx}">
+                        <img class="art-thumb ${idx === 0 ? 'active' : ''}" 
+                             src="${img.thumb}" 
+                             alt="${img.title}"
+                             data-src="${img.src}"
+                             data-title="${img.title}"
+                             data-subtitle="${img.subtitle}"
+                             loading="lazy">
+                        <div class="art-caption">
+                            <span class="art-caption-title">${img.title}</span>
+                            ${img.subtitle} · ${img.date}
+                        </div>
+                    </div>
+                `).join('');
 
+                // Show first image
+                showImage(0);
+            }
 
+            function showImage(index) {
+                const album = albums[currentAlbum];
+                const img = album.images[index];
+                
+                currentImageIndex = index;
+                
+                // Update main image
+                mainImage.src = img.src;
+                mainImage.alt = img.title;
+                mainImage.style.display = 'block';
+                viewerPlaceholder.style.display = 'none';
+                
+                // Update info
+                artTitle.textContent = img.title;
+                artSubtitle.textContent = `${img.subtitle} · ${img.date}`;
+                artInfo.style.display = 'block';
+                
+                // Update thumbnail active state
+                document.querySelectorAll('.art-thumb').forEach((thumb, i) => {
+                    thumb.classList.toggle('active', i === index);
+                });
+            }
 
+            // Event delegation for thumbnails
+            artThumbnails.addEventListener('click', (e) => {
+                const thumb = e.target.closest('.art-thumb');
+                if (thumb) {
+                    const idx = parseInt(thumb.closest('.art-thumb-wrapper').dataset.index);
+                    showImage(idx);
+                }
+            });
 
+            // Album navigation
+            albumNav.addEventListener('click', (e) => {
+                const btn = e.target.closest('.art-album-link');
+                if (btn) {
+                    renderAlbum(btn.dataset.album);
+                }
+            });
 
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+                
+                const album = albums[currentAlbum];
+                if (e.key === 'ArrowRight') {
+                    showImage((currentImageIndex + 1) % album.images.length);
+                } else if (e.key === 'ArrowLeft') {
+                    showImage((currentImageIndex - 1 + album.images.length) % album.images.length);
+                }
+            });
 
+            // Initialize
+            renderAlbum('typographie');
+        })();
+    </script>
 
+        <script>
+            (function() {
+                // Language toggle
+                const langToggle = document.getElementById('langToggle');
+                const langSpans = langToggle ? langToggle.querySelectorAll('[data-lang]') : [];
+                let currentLang = 'fr';
 
+                const translations = {
+                    fr: {
+                        nav: { about: 'À propos', games: 'Jeux', blog: 'Blog', art: 'Art' },
+                        hero: { 
+                            title: { part1: 'Bienvenue', part2: 'melissart' }, 
+                            subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
+                            cta: 'À propos de Mellisa' 
+                        },
+                        blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
+                    },
+                    en: {
+                        nav: { about: 'About', games: 'Games', blog: 'Blog', art: 'Art' },
+                        hero: { 
+                            title: { part1: 'Welcome', part2: 'melissart' }, 
+                            subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
+                            cta: 'About Mellisa' 
+                        },
+                        blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
+                    }
+                };
 
+                function applyLanguage(lang) {
+                    document.documentElement.lang = lang;
+                    document.querySelectorAll('[data-i18n]').forEach(el => {
+                        const key = el.dataset.i18n;
+                        const keys = key.split('.');
+                        let value = translations[lang];
+                        for (const k of keys) { value = value?.[k]; }
+                        if (value) el.textContent = value;
+                    });
+                    langSpans.forEach(s => s.style.display = s.dataset.lang === lang ? '' : 'none');
+                    currentLang = lang;
+                    localStorage.setItem('lang', lang);
+                }
 
+                if (langToggle) {
+                    langToggle.addEventListener('click', () => {
+                        applyLanguage(currentLang === 'fr' ? 'en' : 'fr');
+                    });
+                }
 
+                // Dark mode toggle
+                const themeToggle = document.getElementById('themeToggle');
+                const themeSpans = themeToggle ? themeToggle.querySelectorAll('[data-theme]') : [];
 
+                function applyTheme(theme) {
+                    document.documentElement.setAttribute('data-theme', theme);
+                    themeSpans.forEach(s => s.style.display = s.dataset.theme === theme ? '' : 'none');
+                    localStorage.setItem('theme', theme);
+                }
 
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', () => {
+                        const current = document.documentElement.getAttribute('data-theme') || 'light';
+                        applyTheme(current === 'light' ? 'dark' : 'light');
+                    });
+                }
 
+                // Initialize from localStorage
+                const savedLang = localStorage.getItem('lang');
+                if (savedLang) applyLanguage(savedLang);
 
-
-
-
-
-    
-    
-
-
-
-
-<div class="group " style="--groupBackgroundColor:transparent;  " >
-    
-    
-
-
-
-
-    <p class="" style="" >All content © chat_42 2026.</p>
-
-
-    
-
-
-    <p>chat_42 is a SIE Company. Sony Interactive Entertainment Europe Ltd. Registered Office: 10 Great Marlborough Street, London. W1F 7LP. Registered in England No: 3277793.</p>
-
-    <p><a href="https://www.playstation.com/en-gb/legal/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions">Terms and Conditions</a> | <a href="/cookies-and-data-protection">Cookies and Data Protection</a></p>
-
-
-
-</div>
-
-            </div>
-    </div>
-</div>
-
-        </div>
-    </div>
-
-    
-</footer>
-
-
-
-
-        
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                applyTheme(savedTheme);
+            })();
+        </script>
     </body>
 </html>

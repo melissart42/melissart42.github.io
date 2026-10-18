@@ -316,15 +316,23 @@
             const langSpans = langToggle ? langToggle.querySelectorAll('[data-lang]') : [];
             let currentLang = 'fr';
 
-            const translations = {
+                        const translations = {
                 fr: {
                     nav: { about: 'À propos', games: 'Jeux', blog: 'Blog', art: 'Art' },
-                    hero: { title: 'Nous sommes Media Molecule', subtitle: 'Nous créons des expériences inspirantes qui donnent le pouvoir d'expression aux joueurs et favorisent des communautés positives.', cta: 'À propos de nous' },
+                    hero: { 
+                        title: { part1: 'Bienvenue', part2: 'melissart' }, 
+                        subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
+                        cta: 'À propos de Mellisa' 
+                    },
                     blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
                 },
                 en: {
                     nav: { about: 'About', games: 'Games', blog: 'Blog', art: 'Art' },
-                    hero: { title: 'We Are Media Molecule', subtitle: 'We create inspiring entertainment that empowers player expression and fosters positive communities.', cta: 'About Us' },
+                    hero: { 
+                        title: { part1: 'Welcome', part2: 'melissart' }, 
+                        subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
+                        cta: 'About Mellisa' 
+                    },
                     blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
                 }
             };
