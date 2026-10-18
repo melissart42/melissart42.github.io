@@ -299,10 +299,8 @@
 
 
 
-<a href="/games" class="" >
-    <span class="nav__item-text" data-i18n="nav.games">
-        Jeux
-    </span>
+<a href="/projects" class="" >
+    <span class="nav__item-text" data-i18n="nav.projects">Projets</span>
 </a>
 
     
@@ -447,9 +445,9 @@
             const langSpans = langToggle ? langToggle.querySelectorAll('[data-lang]') : [];
             let currentLang = 'fr';
 
-            const translations = {
+                                    const translations = {
                 fr: {
-                    nav: { about: 'À propos', games: 'Jeux', blog: 'Blog', art: 'Art' },
+                    nav: { about: 'À propos', projects: 'Projets', blog: 'Blog', art: 'Art' },
                     hero: { 
                         title: { part1: 'Bienvenue', part2: 'melissart' }, 
                         subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
@@ -458,7 +456,7 @@
                     blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
                 },
                 en: {
-                    nav: { about: 'About', games: 'Games', blog: 'Blog', art: 'Art' },
+                    nav: { about: 'About', projects: 'Projects', blog: 'Blog', art: 'Art' },
                     hero: { 
                         title: { part1: 'Welcome', part2: 'melissart' }, 
                         subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
@@ -649,26 +647,26 @@
                 const langSpans = langToggle ? langToggle.querySelectorAll('[data-lang]') : [];
                 let currentLang = 'fr';
 
-                const translations = {
-                    fr: {
-                        nav: { about: 'À propos', games: 'Jeux', blog: 'Blog', art: 'Art' },
-                        hero: { 
-                            title: { part1: 'Bienvenue', part2: 'melissart' }, 
-                            subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
-                            cta: 'À propos de Mellisa' 
-                        },
-                        blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
+                                        const translations = {
+                fr: {
+                    nav: { about: 'À propos', projects: 'Projets', blog: 'Blog', art: 'Art' },
+                    hero: { 
+                        title: { part1: 'Bienvenue', part2: 'melissart' }, 
+                        subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
+                        cta: 'À propos de Mellisa' 
                     },
-                    en: {
-                        nav: { about: 'About', games: 'Games', blog: 'Blog', art: 'Art' },
-                        hero: { 
-                            title: { part1: 'Welcome', part2: 'melissart' }, 
-                            subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
-                            cta: 'About Mellisa' 
-                        },
-                        blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
-                    }
-                };
+                    blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
+                },
+                en: {
+                    nav: { about: 'About', projects: 'Projects', blog: 'Blog', art: 'Art' },
+                    hero: { 
+                        title: { part1: 'Welcome', part2: 'melissart' }, 
+                        subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
+                        cta: 'About Mellisa' 
+                    },
+                    blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
+                }
+            };
 
                 function applyLanguage(lang) {
                     document.documentElement.lang = lang;
