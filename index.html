@@ -370,16 +370,26 @@
             <a class="header__logo" href="/">
                 <picture>
                     
-                        <img src="/chat.png" alt="chat_42 logo" class="header__logo-img" style="max-height:120px;width:auto;" />
+                        <img src="/chat.png" alt="melissart logo" class="header__logo-img" style="max-height:120px;width:auto;" />
                     
                 </picture>
-            </a><div class="header__logo-background-mask">
+            </a>
+            
+            
+            <div class="header__tools" style="display:flex;align-items:center;gap:1rem;margin-left:auto;">
+                <button type="button" class="header__lang-toggle" id="langToggle" aria-label="Changer de langue" style="background:none;border:none;cursor:pointer;padding:.5rem;font-family:var(--fontFamilyHeading);font-size:var(--fontSizeNavigation);color:var(--colorTextDefault);">
+                    <span data-lang="fr">FR</span><span data-lang="en" style="display:none;">EN</span>
+                </button>
+                <button type="button" class="header__theme-toggle" id="themeToggle" aria-label="Activer le mode sombre" style="background:none;border:none;cursor:pointer;padding:.5rem;font-family:var(--fontFamilyHeading);font-size:var(--fontSizeNavigation);color:var(--colorTextDefault);">
+                    <span data-theme="light">☀️</span><span data-theme="dark" style="display:none;">🌙</span>
+                </button>
+            </div>
+
+            
+            <div class="header__logo-background-mask">
                 <svg viewBox="0 0 340 176" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.5544 176C30.5335 175.268 14.2086 172.001 0 165.9V0h340c-13.443 28.5353-45.745 68.2592-65.5 91.5-11.699 1.726-20.528 8.748-32.612 18.358C222.468 125.303 194.644 147.431 133 165c-24.293 6.398-47.2268 10.199-68.2329 11H48.5544Z"/></svg>
             </div>
-        
-
-        
-
+            
             <button type="button" class="header__nav-button js-nav-button">Menu</button>
             <button type="button" class="header__nav-button header__nav-button--close js-nav-button">Close</button>
 
@@ -789,9 +799,7 @@
 <div class="atom atom--animate-in js-in-viewport atom--large" style="--atomColor:#ed2793; ">
     <div class="atom__molecule-container">
         <div class="atom__molecule js-atom-connect atom__molecule--shadowed" data-color="#ed2793">
-            <div class="atom__molecule-content">
-                <img src="/patchwork.png" alt="patchwork" class="js-in-viewport grow-in" style="--animationTiming: ease-in-out; --animationDelay: 200ms; --animationDuration: 400ms; max-width:100%; height:auto;" loading="lazy">
-            </div>
+            <div class="atom__molecule-content"></div>
         </div>
         
             <div class="atom__decorations decorations">
@@ -1279,26 +1287,12 @@
 
 
 
-    <div class="gimmick gimmick--waving-sackboy responsive-display--large-only" style="--gimmickX:40%; --gimmickY:9%; ">
-    	
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-        <div class="gimmick__inner js-in-viewport fade-in" style="--animationTiming: ease-in-out; --animationDelay: 500ms; --animationDuration: 300ms;" >
-	        
-                <div class="gimmick__sackboy js-sackboy" data-hover-duration="3000" data-hover-interval="11000">
-                    <div class="gimmick__sackboy-head js-sackboy-head">
-                        <div class="gimmick__sackboy-eye gimmick__sackboy-eye--left"></div>
-                        <div class="gimmick__sackboy-eye gimmick__sackboy-eye--right"></div>
-                    </div>
-                    <div class="gimmick__sackboy-body"></div>
-                    <div class="gimmick__sackboy-arm"></div>
-                </div>
-            
+    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:42%; --decorativeImageY:8%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-2">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 300ms; --animationDuration: 400ms; width:150px; height:auto;" src="/media/Homepage/Hero Atom/cat-42.png" alt="chat 四十二" loading="lazy" />
         </div>
-        
-            </div>
-        
     </div>
+
 
                 
                     
@@ -1343,25 +1337,91 @@
 
 
 
-    <div class="gimmick gimmick--waving-sackboy responsive-display--small-only" style="--gimmickX:75%; --gimmickY:10%; ">
-    	
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-        <div class="gimmick__inner js-in-viewport fade-in" style="--animationTiming: ease-in-out; --animationDelay: 500ms; --animationDuration: 300ms;" >
-	        
-                <div class="gimmick__sackboy js-sackboy" data-hover-duration="3000" data-hover-interval="11000">
-                    <div class="gimmick__sackboy-head js-sackboy-head">
-                        <div class="gimmick__sackboy-eye gimmick__sackboy-eye--left"></div>
-                        <div class="gimmick__sackboy-eye gimmick__sackboy-eye--right"></div>
-                    </div>
-                    <div class="gimmick__sackboy-body"></div>
-                    <div class="gimmick__sackboy-arm"></div>
-                </div>
-            
+    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:72%; --decorativeImageY:10%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-2">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 300ms; --animationDuration: 400ms; width:75px; height:auto;" src="/media/Homepage/Hero Atom Mobile/cat-42.png" alt="chat 四十二" loading="lazy" />
         </div>
-        
-            </div>
-        
+    </div>
+
+
+                
+                    
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:26%; --decorativeImageY:80%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 650ms; --animationDuration: 400ms; width:297px; height:auto;" src="/media/Homepage/Hero Atom/pixel-type.png" alt="Typographie pixel" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:19%; --decorativeImageY:30%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 450ms; --animationDuration: 400ms; width:241px; height:auto;" src="/media/Homepage/Hero Atom/poster-ascii.png" alt="Affiche ASCII" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:80%; --decorativeImageY:13%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-2">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 550ms; --animationDuration: 400ms; width:312px; height:auto;" src="/media/Homepage/Hero Atom/ticket-child.png" alt="Ticket Oakland Zoo" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:87%; --decorativeImageY:41%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 750ms; --animationDuration: 400ms; width:310px; height:auto;" src="/media/Homepage/Hero Atom/ticket-adult.png" alt="Ticket Oakland Zoo" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:77%; --decorativeImageY:71%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 850ms; --animationDuration: 400ms; width:310px; height:auto;" src="/media/Homepage/Hero Atom/ticket-senior.png" alt="Ticket Oakland Zoo" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:50%; --decorativeImageY:50%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 400ms; --animationDuration: 400ms; width:258px; height:auto;" src="/media/Homepage/Hero Atom/girl-box.png" alt="Illustration sur packaging" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:10%; --decorativeImageY:58%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 950ms; --animationDuration: 400ms; width:260px; height:auto;" src="/media/Homepage/Hero Atom/sticker-5.jpg" alt="Artwork" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:68%; --decorativeImageY:90%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 1050ms; --animationDuration: 400ms; width:260px; height:auto;" src="/media/Homepage/Hero Atom/sticker-6.jpg" alt="Artwork" loading="lazy" />
+        </div>
     </div>
 
                 
@@ -1403,14 +1463,45 @@
 
 
 
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:75%; --decorativeImageY:10%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-2">
-        
-                <img class="decorative-image__img js-in-viewport grow-in grow-in--from-left" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 1200ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom/moon.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
+    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:26%; --decorativeImageY:80%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 650ms; --animationDuration: 400ms; width:163px; height:auto;" src="/media/Homepage/Hero Atom Mobile/pixel-type.png" alt="Typographie pixel" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:19%; --decorativeImageY:30%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 450ms; --animationDuration: 400ms; width:134px; height:auto;" src="/media/Homepage/Hero Atom Mobile/poster-ascii.png" alt="Affiche ASCII" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:80%; --decorativeImageY:13%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-2">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 550ms; --animationDuration: 400ms; width:170px; height:auto;" src="/media/Homepage/Hero Atom Mobile/ticket-child.png" alt="Ticket Oakland Zoo" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:87%; --decorativeImageY:41%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 750ms; --animationDuration: 400ms; width:169px; height:auto;" src="/media/Homepage/Hero Atom Mobile/ticket-adult.png" alt="Ticket Oakland Zoo" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:77%; --decorativeImageY:71%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 850ms; --animationDuration: 400ms; width:169px; height:auto;" src="/media/Homepage/Hero Atom Mobile/ticket-senior.png" alt="Ticket Oakland Zoo" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:50%; --decorativeImageY:50%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 400ms; --animationDuration: 400ms; width:144px; height:auto;" src="/media/Homepage/Hero Atom Mobile/girl-box.png" alt="Illustration sur packaging" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:12%; --decorativeImageY:60%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 950ms; --animationDuration: 400ms; width:140px; height:auto;" src="/media/Homepage/Hero Atom Mobile/sticker-5.jpg" alt="Artwork" loading="lazy" />
+        </div>
+    </div>
+    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:74%; --decorativeImageY:88%; ">
+        <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="1">
+            <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 1050ms; --animationDuration: 400ms; width:140px; height:auto;" src="/media/Homepage/Hero Atom Mobile/sticker-6.jpg" alt="Artwork" loading="lazy" />
+        </div>
     </div>
 
                 
@@ -1452,15 +1543,6 @@
 
 
 
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:40%; --decorativeImageY:60%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
-        
-                <img class="decorative-image__img js-in-viewport grow-in grow-in--from-left" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 1200ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom Mobile/moon.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -1501,15 +1583,6 @@
 
 
 
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:20%; --decorativeImageY:50%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img js-in-viewport fade-in fade-in--from-right" style="--animationTiming: ease-in-out; --animationDelay: 600ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom/wool.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -1550,15 +1623,6 @@
 
 
 
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:14%; --decorativeImageY:50%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img js-in-viewport fade-in fade-in--from-right" style="--animationTiming: ease-in-out; --animationDelay: 600ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom Mobile/wool.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -1599,64 +1663,6 @@
 
 
 
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:19%; --decorativeImageY:17%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
-        
-                <img class="decorative-image__img js-in-viewport fade-in" style="--animationTiming: ease-in-out; --animationDelay: 750ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom/playstation-move-cursor.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
-
-                
-                    
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:20%; --decorativeImageY:10%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.2" data-rellax-speed="-1">
-        
-                <img class="decorative-image__img js-in-viewport fade-in" style="--animationTiming: ease-in-out; --animationDelay: 750ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom Mobile/playstation-move-cursor.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -1942,15 +1948,6 @@
 
 
 
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:83%; --decorativeImageY:50%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="3">
-        
-                <img class="decorative-image__img js-in-viewport grow-in grow-in--from-bottom" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 650ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom/rainbow-shoe.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -1991,15 +1988,6 @@
 
 
 
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:63%; --decorativeImageY:50%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="3">
-        
-                <img class="decorative-image__img js-in-viewport grow-in grow-in--from-bottom" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 650ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom Mobile/rainbow-shoe.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -2040,15 +2028,6 @@
 
 
 
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:100%; --decorativeImageY:50%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img js-in-viewport fade-in fade-in--from-left" style="--animationTiming: ease-in-out; --animationDelay: 450ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom/playstation-controller.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -2089,15 +2068,6 @@
 
 
 
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:95%; --decorativeImageY:55%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img js-in-viewport fade-in fade-in--from-left" style="--animationTiming: ease-in-out; --animationDelay: 450ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom Mobile/playstation-controller.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -2138,15 +2108,6 @@
 
 
 
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:18%; --decorativeImageY:82%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-2">
-        
-                <img class="decorative-image__img js-in-viewport grow-in grow-in--from-right" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 800ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom/tearaway-pig.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -2187,15 +2148,6 @@
 
 
 
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:18%; --decorativeImageY:82%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="-1">
-        
-                <img class="decorative-image__img js-in-viewport grow-in grow-in--from-right" style="--animationTiming: cubic-bezier(0.175, 0.885, 0.32, 1.275); --animationDelay: 950ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom Mobile/tearaway-pig.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -2236,15 +2188,6 @@
 
 
 
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:78%; --decorativeImageY:89%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img js-in-viewport fade-in fade-in--from-left" style="--animationTiming: ease-in-out; --animationDelay: 900ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom/tearaway-plane.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -2285,15 +2228,6 @@
 
 
 
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:78%; --decorativeImageY:89%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img js-in-viewport fade-in fade-in--from-left" style="--animationTiming: ease-in-out; --animationDelay: 1050ms; --animationDuration: 300ms;"  src="/media/Homepage/Hero Atom Mobile/tearaway-plane.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -2334,15 +2268,6 @@
 
 
 
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:35%; --decorativeImageY:40%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img js-in-viewport fade-in fade-in--from-left" style="--animationTiming: ease-in-out; --animationDelay: 900ms; --animationDuration: 600ms;"  src="/media/Homepage/Hero Atom/heron.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -2383,15 +2308,6 @@
 
 
 
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:40%; --decorativeImageY:65%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img js-in-viewport fade-in" style="--animationTiming: ease-in-out; --animationDelay: 900ms; --animationDuration: 600ms;"  src="/media/Homepage/Hero Atom/bafta-mask.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -2432,15 +2348,6 @@
 
 
 
-    <div class="decorative-image responsive-display--small-only" style="--decorativeImageX:40%; --decorativeImageY:95%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img js-in-viewport fade-in" style="--animationTiming: ease-in-out; --animationDelay: 900ms; --animationDuration: 600ms;"  src="/media/Homepage/Hero Atom Mobile/bafta-mask.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
                     
@@ -2579,15 +2486,6 @@
 
 
 
-    <div class="decorative-image responsive-display--large-only" style="--decorativeImageX:60%; --decorativeImageY:78%; ">
-	    
-            <div class="js-parallax"  data-rellax-percentage="0.5" data-rellax-speed="0">
-        
-                <img class="decorative-image__img js-in-viewport grow-in" style="--animationTiming: ease-in-out; --animationDelay: 900ms; --animationDuration: 600ms;"  src="/media/Homepage/Hero Atom/smiley-face.png?width=2560&amp;rmode=min&amp;token=uOd1CiIFXNDNvrLIK4fD1Q9z7CbBIJTGZrtF5LxTKqY%3D" alt="" loading="lazy" />
-    	
-            </div>
-        
-    </div>
 
                 
             </div>
@@ -2744,7 +2642,7 @@
         <div class="atom__molecule js-atom-connect" data-color="#12bdff">
             <div class="atom__molecule-content">
                 
-                    <img class="atom__inner-background atom__inner-background--image" src="/media/Homepage/homepage-atom1.jpg?width=768&amp;height=768&amp;rmode=crop&amp;token=G8uXDxKwr2Z5thq6%2F1RE%2B3UZmt5qNW1t9KbEmJTJtUk%3D" alt="" loading="lazy" />
+                    <img class="atom__inner-background atom__inner-background--image" src="/assets/img/sunshine.webp" alt="melissart" loading="lazy" />
                 
             </div>
         </div>
@@ -2843,7 +2741,7 @@
 
 
 
-<h2 id="we-re-expanding-" aria-label="We&#x27;re expanding!" class="heading " style="" >
+<h2 id="decouvre-mon-travail" aria-label="Découvre mon travail" class="heading " style="" >
     
         
             
@@ -2865,7 +2763,7 @@
 
 
 <span class="heading__chunk heading__chunk--font-typed heading__chunk--style-none" style="">
-	We&#x27;re
+	Découvre
 </span>
         
             
@@ -2893,7 +2791,7 @@
 
 
 <span class="heading__chunk heading__chunk--font-handwritten heading__chunk--style-none" style="--headingChunkColor:#12bdff; ">
-	expanding!
+	mon travail
 </span>
         
     
@@ -2903,7 +2801,7 @@
     
 
 
-    <p>Check out our latest jobs:</p>
+    <p>Projets, illustrations et expérimentations graphiques.</p>
 
 
 
@@ -2977,8 +2875,8 @@
     
 
 
-<a href="/art"  class="link btn btn--arrowed " style=""  >
-    View more
+<a href="/projects"  class="link btn btn--arrowed " style=""  >
+    Voir mes projets
 
     
         <svg class="btn__arrow" viewBox="0 0 199 71" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M194.5 39.9164c3.333-1.9245 3.333-6.7357 0-8.6602L145 2.67733c-3.333-1.924497-7.5.48112-7.5 4.33012v7.57885H7c-2.76142 0-5 2.2386-5 5v32c0 2.7614 2.23858 5 5 5h130.5v7.5788c0 3.849 4.167 6.2547 7.5 4.3302l49.5-28.5789Z"/></svg>
@@ -3668,11 +3566,10 @@
     
     
 
-<a href="https://twitter.com/mediamolecule" 
+<a 
    class=""
    title="Twitter logo - click to view our Twitter profile"
-   aria-label="Twitter logo - click to view our Twitter profile"
-    target="_blank" rel="noopener noreferrer" >
+   aria-label="Twitter logo - click to view our Twitter profile"  aria-disabled="true" style="opacity:.35;cursor:default;pointer-events:none;">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M23.706 5.18952C22.871 5.55952 21.974 5.80952 21.031 5.92252C22.004 5.34031 22.7319 4.42398 23.079 3.34452C22.1648 3.88751 21.1643 4.26971 20.121 4.47452C19.4194 3.72538 18.4901 3.22884 17.4773 3.06199C16.4646 2.89514 15.4251 3.06731 14.5202 3.55177C13.6154 4.03623 12.8958 4.80588 12.4732 5.74122C12.0505 6.67656 11.9485 7.72527 12.183 8.72452C10.3307 8.63151 8.51863 8.15007 6.86442 7.31142C5.21022 6.47278 3.75084 5.29568 2.581 3.85652C2.181 4.54652 1.951 5.34652 1.951 6.19852C1.95055 6.96551 2.13943 7.72076 2.50088 8.39725C2.86232 9.07374 3.38516 9.65056 4.023 10.0765C3.28328 10.053 2.55987 9.8531 1.913 9.49352V9.55352C1.91293 10.6293 2.28503 11.6719 2.96618 12.5045C3.64733 13.3371 4.59557 13.9084 5.65 14.1215C4.96378 14.3072 4.24434 14.3346 3.546 14.2015C3.8435 15.1271 4.423 15.9365 5.20337 16.5164C5.98374 17.0963 6.92592 17.4177 7.898 17.4355C6.24783 18.7309 4.20989 19.4336 2.112 19.4305C1.74038 19.4306 1.36908 19.4089 1 19.3655C3.12948 20.7347 5.60834 21.4613 8.14 21.4585C16.71 21.4585 21.395 14.3605 21.395 8.20452C21.395 8.00452 21.39 7.80252 21.381 7.60252C22.2923 6.94349 23.0789 6.12741 23.704 5.19252L23.706 5.18952Z"/>
 </svg>
@@ -3694,7 +3591,7 @@
     
     
 
-<a href="https://www.facebook.com/mediamolecule" 
+<a href="https://www.facebook.com/melkhn" 
    class=""
    title="Facebook logo - click to view our Facebook page"
    aria-label="Facebook logo - click to view our Facebook page"
@@ -3720,7 +3617,7 @@
     
     
 
-<a href="https://www.instagram.com/mediamolecule/" 
+<a href="https://www.instagram.com/khn_mel" 
    class=""
    title="Instagram logo - click to view our Instagram page"
    aria-label="Instagram logo - click to view our Instagram page"
@@ -3746,11 +3643,11 @@
     
     
 
-<a href="https://www.linkedin.com/company/media-molecule-limited/" 
+<a 
    class=""
    title="LinkedIn logo - click to view our LinkedIn page"
    aria-label="LinkedIn logo - click to view our LinkedIn page"
-   >
+    aria-disabled="true" style="opacity:.35;cursor:default;pointer-events:none;">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.838C1 2.35053 1.19365 1.88303 1.53834 1.53834C1.88303 1.19365 2.35053 1 2.838 1H21.16C21.4016 0.999608 21.6409 1.04687 21.8641 1.13907C22.0874 1.23127 22.2903 1.36661 22.4612 1.53734C22.6322 1.70807 22.7677 1.91083 22.8602 2.13401C22.9526 2.3572 23.0001 2.59643 23 2.838V21.16C23.0003 21.4016 22.9529 21.6409 22.8606 21.8642C22.7683 22.0875 22.6328 22.2904 22.462 22.4613C22.2912 22.6322 22.0884 22.7678 21.8651 22.8602C21.6419 22.9526 21.4026 23.0001 21.161 23H2.838C2.59655 23 2.35746 22.9524 2.1344 22.86C1.91134 22.7676 1.70867 22.6321 1.53798 22.4613C1.3673 22.2905 1.23193 22.0878 1.13962 21.8647C1.04731 21.6416 0.999869 21.4025 1 21.161V2.838ZM9.708 9.388H12.687V10.884C13.117 10.024 14.217 9.25 15.87 9.25C19.039 9.25 19.79 10.963 19.79 14.106V19.928H16.583V14.822C16.583 13.032 16.153 12.022 15.061 12.022C13.546 12.022 12.916 13.111 12.916 14.822V19.928H9.708V9.388ZM4.208 19.791H7.416V9.25H4.208V19.79V19.791ZM7.875 5.812C7.88105 6.08668 7.83217 6.35979 7.73124 6.61532C7.63031 6.87084 7.47935 7.10364 7.28723 7.30003C7.09511 7.49643 6.8657 7.65248 6.61246 7.75901C6.35921 7.86554 6.08724 7.92042 5.8125 7.92042C5.53776 7.92042 5.26579 7.86554 5.01255 7.75901C4.7593 7.65248 4.52989 7.49643 4.33777 7.30003C4.14565 7.10364 3.99469 6.87084 3.89376 6.61532C3.79283 6.35979 3.74395 6.08668 3.75 5.812C3.76187 5.27286 3.98439 4.75979 4.36989 4.38269C4.75539 4.00558 5.27322 3.79442 5.8125 3.79442C6.35178 3.79442 6.86961 4.00558 7.25512 4.38269C7.64062 4.75979 7.86313 5.27286 7.875 5.812Z"/>
 </svg>
@@ -3772,7 +3669,7 @@
     
     
 
-<a href="https://www.twitch.tv/media_molecule" 
+<a href="https://www.twitch.tv/melkhn" 
    class=""
    title="Twitch logo - watch our latest streams"
    aria-label="Twitch logo - watch our latest streams"
@@ -3798,7 +3695,7 @@
     
     
 
-<a href="https://www.youtube.com/user/chat_42" 
+<a href="https://www.youtube.com/@EmmaKouhouenou" 
    class=""
    title="YouTube logo - watch our latest videos"
    aria-label="YouTube logo - watch our latest videos"
@@ -3868,7 +3765,7 @@
 
     <p></p>
 
-    <p><a href="https://www.playstation.com/en-gb/legal/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions">Terms and Conditions</a> | <a href="/cookies-and-data-protection">Cookies and Data Protection</a></p>
+    <p><a href="/terms-and-conditions">Terms and Conditions</a> | <a href="/cookies-and-data-protection">Cookies and Data Protection</a></p>
 
 
 
