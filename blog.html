@@ -95,6 +95,132 @@
             [data-theme="dark"] .footer .nav__item a:hover {
                 color: var(--colorPrimary);
             }
+        
+        <style>
+            /* Blog post layout styles */
+            .post {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            .post__header {
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+            .post__meta {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                margin-bottom: 1rem;
+                font-size: 0.875rem;
+                color: var(--colorTextLight);
+            }
+            .post__tags {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            .tag {
+                display: inline-block;
+                padding: 0.25rem 0.75rem;
+                background: var(--colorGreyLight);
+                border-radius: 2rem;
+                font-size: 0.75rem;
+                font-family: var(--fontFamilyHandwritten);
+                color: var(--colorTextDefault);
+            }
+            [data-theme="dark"] .tag {
+                background: var(--colorGrey);
+                color: var(--colorTextDefault);
+            }
+            .post__title {
+                font-family: var(--fontFamilyHeading);
+                font-size: clamp(2rem, 5vw, 3.5rem);
+                font-weight: 700;
+                color: var(--colorTextDefault);
+                margin-bottom: 1.5rem;
+                line-height: 1.2;
+            }
+            .post__cover {
+                margin-bottom: 2rem;
+                border-radius: var(--borderRadiusDefault);
+                overflow: hidden;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+            }
+            .post__cover img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            .post__content {
+                font-size: 1.125rem;
+                line-height: 1.8;
+                color: var(--colorTextDefault);
+            }
+            .post__content h2 {
+                font-family: var(--fontFamilyHeading);
+                font-size: 1.75rem;
+                margin-top: 3rem;
+                margin-bottom: 1.5rem;
+                color: var(--colorTextDefault);
+                border-bottom: 2px solid var(--colorPrimary);
+                padding-bottom: 0.5rem;
+            }
+            .post__content h3 {
+                font-family: var(--fontFamilyHeading);
+                font-size: 1.375rem;
+                margin-top: 2.5rem;
+                margin-bottom: 1rem;
+                color: var(--colorTextDefault);
+            }
+            .post__content p {
+                margin-bottom: 1.5rem;
+                line-height: 1.8;
+            }
+            .post__content ul,
+            .post__content ol {
+                margin-bottom: 1.5rem;
+                padding-left: 1.5rem;
+            }
+            .post__content li {
+                margin-bottom: 0.5rem;
+                line-height: 1.8;
+            }
+            .post__content blockquote {
+                border-left: 4px solid var(--colorPrimary);
+                padding-left: 1.5rem;
+                margin: 2rem 0;
+                font-style: italic;
+                color: var(--colorTextLight);
+            }
+            .post__content strong {
+                font-weight: 700;
+                color: var(--colorTextDefault);
+            }
+            .post__content a {
+                color: var(--colorPrimary);
+                text-decoration: underline;
+            }
+            .post__content a:hover {
+                color: var(--colorPrimaryActive);
+            }
+            .post__footer {
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 1px solid var(--colorGreyLight);
+                text-align: center;
+            }
+            @media (max-width: 768px) {
+                .post__title {
+                    font-size: 2rem;
+                }
+                .post__content {
+                    font-size: 1rem;
+                }
+            }
+        </style>
+
         </style>
 
 
@@ -1878,13 +2004,13 @@
 
 
 
-    <p class="" style="" >All content © chat_42 2026.</p>
+    <p class="" style="" >All content © Melissart 2026.</p>
 
 
     
 
 
-    <p>chat_42 is a SIE Company. Sony Interactive Entertainment Europe Ltd. Registered Office: 10 Great Marlborough Street, London. W1F 7LP. Registered in England No: 3277793.</p>
+    <p></p>
 
     <p><a href="https://www.playstation.com/en-gb/legal/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions">Terms and Conditions</a> | <a href="/cookies-and-data-protection">Cookies and Data Protection</a></p>
 
