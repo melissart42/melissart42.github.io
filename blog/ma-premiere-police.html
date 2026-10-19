@@ -12,13 +12,13 @@
 <meta content="/blog/ma-premiere-police.html" name="og:url" />
 <meta content="Ma première police de caractères | Blog" name="og:title" />
 <meta content="Comment j'ai dessiné JeuneCrack pour le programme cybersec, de l'esquisse papier au fichier .woff." name="og:description" />
-<meta content="/assets/img/jeunecrack.svg" name="og:image" />
-<meta content="/assets/img/jeunecrack.svg" name="image" property="og:image" />
+<meta content="/assets/img/myfont.jpg" name="og:image" />
+<meta content="/assets/img/myfont.jpg" name="image" property="og:image" />
 <meta content="summary_large_image" name="twitter:card" />
 <meta content="/blog/ma-premiere-police.html" name="twitter:url" />
 <meta content="Ma première police de caractères | Blog" name="twitter:title" />
 <meta content="Comment j'ai dessiné JeuneCrack pour le programme cybersec, de l'esquisse papier au fichier .woff." name="twitter:description" />
-<meta content="/assets/img/jeunecrack.svg" name="twitter:image" />
+<meta content="/assets/img/myfont.jpg" name="twitter:image" />
 <meta content="#ffffff" name="msapplication-TileColor" />
 <meta content="#ffffff" name="theme-color" />
 
@@ -180,7 +180,7 @@
 
 
 
-<a href="/projects" class="" >
+<a href="/games" class="" >
     <span class="nav__item-text" data-i18n="nav.projects">Projects</span>
 </a>
 
@@ -260,11 +260,11 @@
                                     <h1 class="post__title">Ma première police de caractères</h1>
                                 </header>
                                 <div class="post__cover">
-                                    <img src="/assets/img/jeunecrack.svg" alt="Ma première police de caractères" loading="lazy">
+                                    <img src="/assets/img/myfont.jpg" alt="Ma première police de caractères" loading="lazy">
                                 </div>
                                 <div class="post__content">
                                     <h2>Le contexte : JeuneCrack</h2></p>
-<p>Dans le cadre de la conception du programme <strong>Jeunecrack</strong> (un programme de cybersécurité type piscine), inspiré du rappeur <strong>hjeunecrack</strong> ([huntik.onrender.com](https://huntik.onrender.com/)), en collab avec <strong>Tedsig42</strong> ([tednoob17.github.io](https://tednoob17.github.io/)) aka mon grand frère, on a bossé pour construire une police pour le site.</p>
+<p>Dans le cadre de la conception du programme <strong>JeuneCrack</strong> (un programme de cybersécurité type piscine), inspiré du rappeur <strong>hjeunecrack</strong> ([huntik.onrender.com](https://huntik.onrender.com/)), en collab avec <strong>Tedsig42</strong> ([tednoob17.github.io](https://tednoob17.github.io/)) aka mon grand frère, on a bossé pour construire une police pour le site.</p>
 <h2>Du papier à la tablette</h2></p>
 <p>La police a été <strong>dessiné à la main sur papier A4</strong>, puis avec la <strong>tablette graphique du SCOP</strong> (Seme City Open Park) elle a été finalisée.</p>
 <h2>Outil open source & format .woff</h2></p>
@@ -316,23 +316,15 @@
             const langSpans = langToggle ? langToggle.querySelectorAll('[data-lang]') : [];
             let currentLang = 'fr';
 
-                                                const translations = {
+            const translations = {
                 fr: {
-                    nav: { about: 'À propos', projects: 'Projets', blog: 'Blog', art: 'Art' },
-                    hero: { 
-                        title: { part1: 'Bienvenue', part2: 'melissart' }, 
-                        subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
-                        cta: 'À propos de Mellisa' 
-                    },
+                    nav: { about: 'À propos', games: 'Jeux', blog: 'Blog', art: 'Art' },
+                    hero: { title: 'Nous sommes Media Molecule', subtitle: 'Nous créons des expériences inspirantes qui donnent le pouvoir d'expression aux joueurs et favorisent des communautés positives.', cta: 'À propos de nous' },
                     blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
                 },
                 en: {
-                    nav: { about: 'About', projects: 'Projects', blog: 'Blog', art: 'Art' },
-                    hero: { 
-                        title: { part1: 'Welcome', part2: 'melissart' }, 
-                        subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
-                        cta: 'About Mellisa' 
-                    },
+                    nav: { about: 'About', games: 'Games', blog: 'Blog', art: 'Art' },
+                    hero: { title: 'We Are Media Molecule', subtitle: 'We create inspiring entertainment that empowers player expression and fosters positive communities.', cta: 'About Us' },
                     blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
                 }
             };

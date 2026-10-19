@@ -12,13 +12,13 @@
 <meta content="/blog/pourquoi-je-dessine-a-la-main.html" name="og:url" />
 <meta content="Pourquoi je dessine encore à la main | Blog" name="og:title" />
 <meta content="Dans un monde tout numérique, le papier garde une place spéciale dans mon processus." name="og:description" />
-<meta content="/assets/img/affiche-typo.svg" name="og:image" />
-<meta content="/assets/img/affiche-typo.svg" name="image" property="og:image" />
+<meta content="/assets/img/canvas.png" name="og:image" />
+<meta content="/assets/img/canvas.png" name="image" property="og:image" />
 <meta content="summary_large_image" name="twitter:card" />
 <meta content="/blog/pourquoi-je-dessine-a-la-main.html" name="twitter:url" />
 <meta content="Pourquoi je dessine encore à la main | Blog" name="twitter:title" />
 <meta content="Dans un monde tout numérique, le papier garde une place spéciale dans mon processus." name="twitter:description" />
-<meta content="/assets/img/affiche-typo.svg" name="twitter:image" />
+<meta content="/assets/img/canvas.png" name="twitter:image" />
 <meta content="#ffffff" name="msapplication-TileColor" />
 <meta content="#ffffff" name="theme-color" />
 
@@ -180,7 +180,7 @@
 
 
 
-<a href="/projects" class="" >
+<a href="/games" class="" >
     <span class="nav__item-text" data-i18n="nav.projects">Projects</span>
 </a>
 
@@ -260,7 +260,7 @@
                                     <h1 class="post__title">Pourquoi je dessine encore à la main</h1>
                                 </header>
                                 <div class="post__cover">
-                                    <img src="/assets/img/affiche-typo.svg" alt="Pourquoi je dessine encore à la main" loading="lazy">
+                                    <img src="/assets/img/canvas.png" alt="Pourquoi je dessine encore à la main" loading="lazy">
                                 </div>
                                 <div class="post__content">
                                     <h2>Le contact du papier</h2></p>
@@ -314,23 +314,15 @@
             const langSpans = langToggle ? langToggle.querySelectorAll('[data-lang]') : [];
             let currentLang = 'fr';
 
-                                                const translations = {
+            const translations = {
                 fr: {
-                    nav: { about: 'À propos', projects: 'Projets', blog: 'Blog', art: 'Art' },
-                    hero: { 
-                        title: { part1: 'Bienvenue', part2: 'melissart' }, 
-                        subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
-                        cta: 'À propos de Mellisa' 
-                    },
+                    nav: { about: 'À propos', games: 'Jeux', blog: 'Blog', art: 'Art' },
+                    hero: { title: 'Nous sommes Media Molecule', subtitle: 'Nous créons des expériences inspirantes qui donnent le pouvoir d'expression aux joueurs et favorisent des communautés positives.', cta: 'À propos de nous' },
                     blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
                 },
                 en: {
-                    nav: { about: 'About', projects: 'Projects', blog: 'Blog', art: 'Art' },
-                    hero: { 
-                        title: { part1: 'Welcome', part2: 'melissart' }, 
-                        subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
-                        cta: 'About Mellisa' 
-                    },
+                    nav: { about: 'About', games: 'Games', blog: 'Blog', art: 'Art' },
+                    hero: { title: 'We Are Media Molecule', subtitle: 'We create inspiring entertainment that empowers player expression and fosters positive communities.', cta: 'About Us' },
                     blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
                 }
             };
