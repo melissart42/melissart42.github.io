@@ -96,7 +96,6 @@
                 color: var(--colorPrimary);
             }
         
-        <style>
             /* Blog post layout styles */
             .post {
                 max-width: 800px;
@@ -219,7 +218,23 @@
                     font-size: 1rem;
                 }
             }
-        </style>
+        
+            /* Toolbar langue/theme : placee SOUS la barre de menu. Le menu et le
+               bouton "Menu" sont position:fixed et recouvraient les boutons,
+               les rendant non cliquables. */
+            .header__tools {
+                position: fixed;
+                top: 8.5rem;
+                right: 1.6rem;
+                z-index: 1002;
+                background-color: var(--headerBackgroundColor);
+                background-image: var(--headerBackgroundPattern);
+                background-repeat: repeat;
+                border-radius: 1.6rem;
+                padding: .25rem .5rem;
+                filter: drop-shadow(0 2px 6px rgba(0,0,0,.15));
+            }
+        
 
         </style>
 
@@ -3785,5 +3800,81 @@
 
 
         
+        <script>
+        (function() {
+            // Language toggle
+            const langToggle = document.getElementById('langToggle');
+            const langSpans = langToggle ? langToggle.querySelectorAll('[data-lang]') : [];
+            let currentLang = 'fr';
+
+            const translations = {
+                fr: {
+                    about: { hello1: "Melissa Kouhouenou — artiste et designer numérique.", hello2: "Après plusieurs années dans le monde du style et de la mode, j'ai choisi de faire une reconversion dans le numérique pour me consacrer pleinement à ce qui m'anime depuis toujours : le dessin, l'illustration, la typographie et la direction artistique.", hello3: "Ce site est mon portfolio personnel : un espace où je partage mes créations, mes expérimentations graphiques, mes apprentissages et ma vision du design.", blogText: "Le blog, c'est là que je raconte le processus : esquisses papier, création de polices, inspirations et coulisses de ce site.", blogCta: "Lire le blog", projectsText: "JeuneCrack, Affiche Typographique, Identité Café, Voler comme un artiste — typographie, illustration et direction artistique.", projectsCta: "Voir tous les projets", artText: "Dessins, illustrations et expérimentations graphiques : du papier à la tablette.", artCta: "Voir tout l'art" },
+                    nav: { about: 'À propos', projects: 'Projets', blog: 'Blog', art: 'Art' },
+                    hero: { 
+                        title: { part1: 'Bienvenue', part2: 'melissart' }, 
+                        subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
+                        cta: 'À propos de Mellisa' 
+                    },
+                    blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
+                },
+                en: {
+                    about: { hello1: "Melissa Kouhouenou — artist and digital designer.", hello2: "After several years in the worlds of style and fashion, I switched careers to digital to fully dedicate myself to what has always driven me: drawing, illustration, typography and art direction.", hello3: "This site is my personal portfolio: a space where I share my creations, graphic experiments, learnings and vision of design.", blogText: "The blog is where I tell the process: paper sketches, font creation, inspirations and behind-the-scenes of this site.", blogCta: "Read the blog", projectsText: "JeuneCrack, Typographic Poster, Café Identity, Steal Like an Artist — typography, illustration and art direction.", projectsCta: "See all projects", artText: "Drawings, illustrations and graphic experiments: from paper to tablet.", artCta: "See all art" },
+                    nav: { about: 'About', projects: 'Projects', blog: 'Blog', art: 'Art' },
+                    hero: { 
+                        title: { part1: 'Welcome', part2: 'melissart' }, 
+                        subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
+                        cta: 'About Mellisa' 
+                    },
+                    blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
+                }
+            };
+
+            function applyLanguage(lang) {
+                document.documentElement.lang = lang;
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.dataset.i18n;
+                    const keys = key.split('.');
+                    let value = translations[lang];
+                    for (const k of keys) { value = value?.[k]; }
+                    if (value) el.textContent = value;
+                });
+                langSpans.forEach(s => s.style.display = s.dataset.lang === lang ? '' : 'none');
+                currentLang = lang;
+                localStorage.setItem('lang', lang);
+            }
+
+            if (langToggle) {
+                langToggle.addEventListener('click', () => {
+                    applyLanguage(currentLang === 'fr' ? 'en' : 'fr');
+                });
+            }
+
+            // Dark mode toggle
+            const themeToggle = document.getElementById('themeToggle');
+            const themeSpans = themeToggle ? themeToggle.querySelectorAll('[data-theme]') : [];
+
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                themeSpans.forEach(s => s.style.display = s.dataset.theme === theme ? '' : 'none');
+                localStorage.setItem('theme', theme);
+            }
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const current = document.documentElement.getAttribute('data-theme') || 'light';
+                    applyTheme(current === 'light' ? 'dark' : 'light');
+                });
+            }
+
+            // Initialize from localStorage
+            const savedLang = localStorage.getItem('lang');
+            if (savedLang) applyLanguage(savedLang);
+
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            applyTheme(savedTheme);
+        })();
+    </script>
+
     </body>
 </html>

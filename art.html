@@ -568,31 +568,11 @@
                                 <h1 class="mast-big" style="font-family: var(--fontFamilyHeading); font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; margin-bottom: 1rem; color: var(--colorTextDefault);">ARTWORKS</h1>
                                 <hr class="mast-rule" style="border: none; border-top: 2px solid var(--colorPrimary); width: 60px; margin-bottom: 1.5rem;">
                                 
-                                <nav class="alb-sel art-album-nav" id="albumNav" role="tablist">
-                                    <button class="art-album-link active" data-album="typographie" role="tab" aria-selected="true">Typography</button>
-                                    <button class="art-album-link" data-album="illustrations" role="tab" aria-selected="false">Illustrations</button>
-                                    <button class="art-album-link" data-album="digital" role="tab" aria-selected="false">Digital Art</button>
-                                    <button class="art-album-link" data-album="sketches" role="tab" aria-selected="false">Sketches</button>
-                                </nav>
                             </header>
 
-                            <div class="art-gallery">
-                                <!-- Main Viewer -->
-                                <div class="art-viewer" id="artViewer">
-                                    <div class="art-viewer-placeholder" id="viewerPlaceholder">
-                                        Sélectionnez une image pour la voir en grand
-                                    </div>
-                                    <img id="mainImage" src="" alt="" style="display:none;">
-                                    <div class="art-info" id="artInfo" style="display:none;">
-                                        <div class="art-info-title" id="artTitle"></div>
-                                        <div class="art-info-subtitle" id="artSubtitle"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Thumbnails Sidebar -->
-                                <div class="art-thumbnails" id="artThumbnails">
-                                    <!-- Thumbnails will be injected here -->
-                                </div>
+                            <div class="art-wip" style="max-width: 660px; margin: 1rem auto 3rem;">
+                                <p style="font-family: var(--fontFamilyHeading); font-size: 1.75rem; margin-bottom: 1rem; color: var(--colorTextDefault);" data-i18n="page.wipTitle">En cours de construction</p>
+                                <p style="font-family: var(--fontFamilyHandwritten); font-size: 1.25rem; color: var(--colorTextLight); line-height: 1.7;" data-i18n="page.wipText">La section contiendra des dessins et images pour avoir une autre source d'archives d'images en dehors des r&eacute;seaux sociaux.</p>
                             </div>
 
                             <!-- Font Preview Section -->
@@ -685,7 +665,11 @@
                         subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
                         cta: 'À propos de Mellisa' 
                     },
-                    blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
+                    blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' },
+                    page: {
+                        wipTitle: 'En cours de construction',
+                        wipText: "La section contiendra des dessins et images pour avoir une autre source d'archives d'images en dehors des réseaux sociaux."
+                    }
                 },
                 en: {
                     nav: { about: 'About', projects: 'Projects', blog: 'Blog', art: 'Art' },
@@ -694,7 +678,11 @@
                         subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
                         cta: 'About Mellisa' 
                     },
-                    blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
+                    blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' },
+                    page: {
+                        wipTitle: 'Under construction',
+                        wipText: "This section will contain drawings and images, to provide another source of image archives outside of social networks."
+                    }
                 }
             };
 
@@ -839,7 +827,7 @@
             }
 
             // Event delegation for thumbnails
-            artThumbnails.addEventListener('click', (e) => {
+            if (artThumbnails) artThumbnails.addEventListener('click', (e) => {
                 const thumb = e.target.closest('.art-thumb');
                 if (thumb) {
                     const idx = parseInt(thumb.closest('.art-thumb-wrapper').dataset.index);
@@ -848,7 +836,7 @@
             });
 
             // Album navigation
-            albumNav.addEventListener('click', (e) => {
+            if (albumNav) albumNav.addEventListener('click', (e) => {
                 const btn = e.target.closest('.art-album-link');
                 if (btn) {
                     renderAlbum(btn.dataset.album);
@@ -868,7 +856,7 @@
             });
 
             // Initialize
-            renderAlbum('typographie');
+            if (artThumbnails) renderAlbum('typographie');
         })();
     </script>
 
@@ -887,7 +875,11 @@
                         subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
                         cta: 'À propos de Mellisa' 
                     },
-                    blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
+                    blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' },
+                    page: {
+                        wipTitle: 'En cours de construction',
+                        wipText: "La section contiendra des dessins et images pour avoir une autre source d'archives d'images en dehors des réseaux sociaux."
+                    }
                 },
                 en: {
                     nav: { about: 'About', projects: 'Projects', blog: 'Blog', art: 'Art' },
@@ -896,7 +888,11 @@
                         subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
                         cta: 'About Mellisa' 
                     },
-                    blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
+                    blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' },
+                    page: {
+                        wipTitle: 'Under construction',
+                        wipText: "This section will contain drawings and images, to provide another source of image archives outside of social networks."
+                    }
                 }
             };
 

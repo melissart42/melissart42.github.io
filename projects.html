@@ -95,7 +95,6 @@
                 color: var(--colorPrimary);
             }
          
-        <style>
             /* Blog post layout styles */
             .post {
                 max-width: 800px;
@@ -218,7 +217,23 @@
                     font-size: 1rem;
                 }
             }
-        </style>
+        
+            /* Toolbar langue/theme : placee SOUS la barre de menu. Le menu et le
+               bouton "Menu" sont position:fixed et recouvraient les boutons,
+               les rendant non cliquables. */
+            .header__tools {
+                position: fixed;
+                top: 8.5rem;
+                right: 1.6rem;
+                z-index: 1002;
+                background-color: var(--headerBackgroundColor);
+                background-image: var(--headerBackgroundPattern);
+                background-repeat: repeat;
+                border-radius: 1.6rem;
+                padding: .25rem .5rem;
+                filter: drop-shadow(0 2px 6px rgba(0,0,0,.15));
+            }
+        
         
         </style>
         
@@ -381,97 +396,16 @@
                                 </p>
                             </header>
 
-                            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                                
-                                <!-- Projet 1: JeuneCrack -->
-                                <article class="project-card" style="background: var(--colorSurface); border-radius: var(--borderRadiusDefault); overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                                    <div class="project-cover" style="aspect-ratio: 16/10; overflow: hidden;">
-                                        <img src="/assets/img/myfont.jpg" alt="JeuneCrack" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-                                    </div>
-                                    <div class="project-content" style="padding: 1.5rem;">
-                                        <div class="project-meta" style="display: flex; gap: 1rem; font-size: 0.875rem; color: var(--colorTextLight); margin-bottom: 0.75rem; font-family: var(--fontFamilyHandwritten);">
-                                            <span>2026</span>
-                                            <span>•</span>
-                                            <span>Typography</span>
-                                            <span>•</span>
-                                            <span>Cybersec</span>
-                                        </div>
-                                        <h3 style="font-family: var(--fontFamilyHeading); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--colorTextDefault);">JeuneCrack</h3>
-                                        <p style="color: var(--colorTextLight); margin-bottom: 1rem; line-height: 1.6;">Police display créée pour le programme cybersec JeuneCrack. Dessinée main sur A4, finalisée sur tablette graphique SCOP, vectorisée en open source → .woff.</p>
-                                        <a href="/blog/ma-premiere-police.html" class="link--scribbled" style="display: inline-block; margin-top: 1rem;">Voir le projet</a>
-                                    </div>
-                                </article>
-
-                                <!-- Projet 2: Affiche Typo -->
-                                <article class="project-card" style="background: var(--colorSurface); border-radius: var(--borderRadiusDefault); overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                                    <div class="project-cover" style="aspect-ratio: 16/10; overflow: hidden;">
-                                        <img src="/assets/img/canvas.png" alt="Affiche Typographique" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-                                    </div>
-                                    <div class="project-content" style="padding: 1.5rem;">
-                                        <div class="project-meta" style="display: flex; gap: 1rem; font-size: 0.875rem; color: var(--colorTextLight); margin-bottom: 0.75rem; font-family: var(--fontFamilyHandwritten);">
-                                            <span>2026</span>
-                                            <span>•</span>
-                                            <span>Typography</span>
-                                            <span>•</span>
-                                            <span>Poster</span>
-                                        </div>
-                                        <h3 style="font-family: var(--fontFamilyHeading); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--colorTextDefault);">Affiche Typographique</h3>
-                                        <p style="color: var(--colorTextLight); margin-bottom: 1rem; line-height: 1.6;">Expérimentation typographique grand format. Composition, hiérarchie, rythme visuel. Exploration du lettrage comme image.</p>
-                                        <a href="/blog/ma-premiere-police.html" class="link--scribbled" style="display: inline-block; margin-top: 1rem;">Voir le projet</a>
-                                    </div>
-                                </article>
-
-                                <!-- Projet 3: Identité Café -->
-                                <article class="project-card" style="background: var(--colorSurface); border-radius: var(--borderRadiusDefault); overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                                    <div class="project-cover" style="aspect-ratio: 16/10; overflow: hidden;">
-                                        <img src="/assets/img/bag.jpg" alt="Identité Café" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-                                    </div>
-                                    <div class="project-content" style="padding: 1.5rem;">
-                                        <div class="project-meta" style="display: flex; gap: 1rem; font-size: 0.875rem; color: var(--colorTextLight); margin-bottom: 0.75rem; font-family: var(--fontFamilyHandwritten);">
-                                            <span>2025</span>
-                                            <span>•</span>
-                                            <span>Branding</span>
-                                            <span>•</span>
-                                            <span>Lettering</span>
-                                        </div>
-                                        <h3 style="font-family: var(--fontFamilyHeading); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--colorTextDefault);">Identité Café</h3>
-                                        <p style="color: var(--colorTextLight); margin-bottom: 1rem; line-height: 1.6;">Direction artistique complète pour un café de spécialité. Logo, lettering, packaging, signalétique. Collaboration avec Tedsig42.</p>
-                                        <a href="/blog/voler-comme-un-artiste.html" class="link--scribbled" style="display: inline-block; margin-top: 1rem;">Voir le projet</a>
-                                    </div>
-                                </article>
-
-                                <!-- Projet 4: Voler comme un artiste -->
-                                <article class="project-card" style="background: var(--colorSurface); border-radius: var(--borderRadiusDefault); overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                                    <div class="project-cover" style="aspect-ratio: 16/10; overflow: hidden;">
-                                        <img src="/assets/img/steallikeaartiste.jpg" alt="Voler comme un artiste" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-                                    </div>
-                                    <div class="project-content" style="padding: 1.5rem;">
-                                        <div class="project-meta" style="display: flex; gap: 1rem; font-size: 0.875rem; color: var(--colorTextLight); margin-bottom: 0.75rem; font-family: var(--fontFamilyHandwritten);">
-                                            <span>2026</span>
-                                            <span>•</span>
-                                            <span>Illustration</span>
-                                            <span>•</span>
-                                            <span>Digital Art</span>
-                                        </div>
-                                        <h3 style="font-family: var(--fontFamilyHeading); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--colorTextDefault);">Voler comme un artiste</h3>
-                                        <p style="color: var(--colorTextLight); margin-bottom: 1rem; line-height: 1.6;">Illustration inspirée du livre d'Austin Kleon. Exploration du concept "rien n'est original" en digital painting (Procreate/iPad).</p>
-                                        <a href="/blog/voler-comme-un-artiste.html" class="link--scribbled" style="display: inline-block; margin-top: 1rem;">Voir le projet</a>
-                                    </div>
-                                </article>
-
-                            </div>
-
-                            <div style="text-align: center; margin-top: 3rem;">
-                                <p style="font-family: var(--fontFamilyHandwritten); color: var(--colorTextLight); margin-bottom: 2rem;">
-                                    D'autres projets arrivent bientôt...
-                                </p>
-                                <a href="/blog" class="link--scribbled">Voir le blog pour plus de détails</a>
+                            <div style="max-width: 660px; margin: 2rem auto 0; text-align: center;">
+                                <p style="font-family: var(--fontFamilyHeading); font-size: 1.75rem; margin-bottom: 1rem; color: var(--colorTextDefault);" data-i18n="page.wipTitle">En cours de construction</p>
+                                <p style="font-family: var(--fontFamilyHandwritten); font-size: 1.25rem; color: var(--colorTextLight); line-height: 1.7; margin-bottom: 2rem;" data-i18n="page.wipText">Cette page est en travaux&nbsp;: je pr&eacute;pare la pr&eacute;sentation d&eacute;taill&eacute;e de mes projets (police JeuneCrack, affiche typographique, identit&eacute; caf&eacute;, illustration). En attendant, les coulisses sont sur le blog.</p>
+                                <a href="/blog" class="link--scribbled" data-i18n="page.wipCta">Lire le blog</a>
                             </div>
 
                         </div>
                     </div>
                 </div>
-            </section>
+</section>
         </main>
 
         <footer class="footer" style="--footerBackgroundColor:#1c3144; --footerColor:#ffffff; --footerColorInverted:#1c3144; ">
@@ -519,7 +453,12 @@
                         subtitle: 'Portfolio de design numérique & typographie. Étudiante passionnée par la création de polices et le processus créatif.', 
                         cta: 'À propos de Mellisa' 
                     },
-                    blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' }
+                    blog: { title: 'Blog', readMore: 'Lire la suite', latest: 'Derniers articles', back: '← Retour au blog' },
+                    page: {
+                        wipTitle: 'En cours de construction',
+                        wipText: "Cette page est en travaux : je prépare la présentation détaillée de mes projets (police JeuneCrack, affiche typographique, identité café, illustration). En attendant, les coulisses sont sur le blog.",
+                        wipCta: 'Lire le blog'
+                    }
                 },
                 en: {
                     nav: { about: 'About', projects: 'Projects', blog: 'Blog', art: 'Art' },
@@ -528,7 +467,12 @@
                         subtitle: 'Digital design & typography portfolio. Student passionate about font creation and creative process.', 
                         cta: 'About Mellisa' 
                     },
-                    blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' }
+                    blog: { title: 'Blog', readMore: 'Read more', latest: 'Latest Articles', back: '← Back to blog' },
+                    page: {
+                        wipTitle: 'Under construction',
+                        wipText: "This page is being built: I'm preparing a detailed presentation of my projects (JeuneCrack typeface, typographic poster, café identity, illustration). Meanwhile, the behind-the-scenes are on the blog.",
+                        wipCta: 'Read the blog'
+                    }
                 }
             };
 
